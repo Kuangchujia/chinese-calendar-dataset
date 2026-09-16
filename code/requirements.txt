@@ -1,0 +1,10 @@
+# 天文历算工具链依赖（2026-09-14 实测可装）
+# 装法：python -m pip install -r requirements.txt
+# 注：skyfield-data 自带 de421.bsp 与 finals2000A.all，装它即可离线跑，无需访问 NASA JPL。
+skyfield==1.55
+skyfield-data==7.0.0
+jplephem==2.24
+numpy==2.5.3
+sgp4==2.27
+# 备用，未采用（基准表止于 2018 年，2026 年属外推区；实测偏差 5.5 分钟）
+# ephem==4.2.1

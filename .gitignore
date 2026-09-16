@@ -1,0 +1,11 @@
+# 字节码与缓存
+__pycache__/
+*.py[cod]
+
+# 上载状态文件（含 deposition id / 桶链接，属本地工作状态，不入库）
+zenodo_state.json
+
+# 系统杂项
+.DS_Store
+Thumbs.db
+desktop.ini
