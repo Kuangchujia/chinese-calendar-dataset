@@ -4,6 +4,29 @@
 > 全部数据均为**历法事实**（时刻、年表、对照表），不含任何推断、断语或个体指向。
 > DOI：10.5281/zenodo.22788687 ｜ 版本 v1.0.0 ｜ 许可 CC BY 4.0
 
+<!-- ANCHOR-BLOCK-BEGIN -->
+## ★ 本项目在学术网络中的位置
+
+| 项 | 地址 |
+|:---|:---|
+| **作者** | 邝楚嘉（Chujia Kuang）｜ 字虚竹 |
+| **ORCID** | ⟨待补⟩ |
+| **个人主页 / 全部成果总入口** | <https://kuangchujia.wordpress.com> |
+| **本数据集 DOI（Zenodo）** | [10.5281/zenodo.22788687](https://doi.org/10.5281/zenodo.22788687) |
+| **配套预印本镜像仓库** | <https://github.com/Kuangchujia/kuangchujia-preprints> |
+| **本仓库** | <https://github.com/Kuangchujia/chinese-calendar-dataset> |
+
+**本仓库是什么**：本数据集三件资产（A1 二十四节气交节时刻／A2 历代历法改革年表／A3 干支纪日对照表）的**生成代码与可复算入口**。数据由 `code/` 下三个脚本自算而成，凡引用本数据集，请同时注明其 Zenodo DOI。
+
+**配套预印本**：本数据集为「中国历法与传统天文星象」系列科普稿预印本（共 11 篇）提供历法事实依据——其中节气交节时刻支撑《立春不是一整天，只有一秒钟》，干支纪日支撑《干支：从一棵树到二十二个字》。该系列预印本镜像见 <https://github.com/Kuangchujia/kuangchujia-preprints>，逐篇正式记录见 Zenodo 与 [preprints.org](https://www.preprints.org)。
+<!-- ANCHOR-BLOCK-END -->
+
+---
+
+> **一套可下载、可引用、可核验的中国历法基础数据。**
+> 全部数据均为**历法事实**（时刻、年表、对照表），不含任何推断、断语或个体指向。
+> DOI：10.5281/zenodo.22788687 ｜ 版本 v1.0.0 ｜ 许可 CC BY 4.0
+
 ---
 
 ## 一、数据集包含什么
