@@ -5,7 +5,8 @@
   "creators": [
     {
       "name": "邝楚嘉",
-      "affiliation": ""
+      "affiliation": "",
+      "orcid": "0009-0002-7650-833X"
     }
   ],
   "license": "cc-by-4.0",
@@ -24,7 +25,23 @@
     "ganzhi",
     "ephemeris"
   ],
-  "related_identifiers": [],
-  "notes": "本数据集为独立的第二来源，用于复算与长跨度查询。引用具体节气时刻时，宜同时注明中国科学院紫金山天文台《中国天文年历》或《日历资料》。",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Kuangchujia/kuangchujia-preprints",
+      "relation": "isSupplementTo",
+      "resource_type": "text"
+    },
+    {
+      "identifier": "https://kuangchujia.com",
+      "relation": "isDocumentedBy",
+      "resource_type": "other"
+    },
+    {
+      "identifier": "https://openalex.org/W7213411799",
+      "relation": "isIdenticalTo",
+      "resource_type": "dataset"
+    }
+  ],
+  "notes": "本数据集为独立的第二来源，用于复算与长跨度查询。引用具体节气时刻时，宜同时注明中国科学院紫金山天文台《中国天文年历》或《日历资料》。作者学术索引：ORCID 0009-0002-7650-833X ｜ OpenAlex 作者号 A5151908354（https://openalex.org/A5151908354）｜ 站点 https://kuangchujia.com 。",
   "version": "1.0.0"
 }

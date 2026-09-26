@@ -13,11 +13,19 @@ authors:
   - family-names: "邝"
     given-names: "楚嘉"
     alias: "虚竹"
+    orcid: "https://orcid.org/0009-0002-7650-833X"
 version: "1.0.0"
 date-released: "2026-09-16"
 doi: "10.5281/zenodo.22788686"
 license: "CC-BY-4.0"
 language: "zho"
+identifiers:
+  - type: other
+    value: "https://openalex.org/A5151908354"
+    description: "OpenAlex author index — 邝楚嘉（Chujia Kuang）"
+  - type: url
+    value: "https://kuangchujia.com"
+    description: "Author hub — 全部成果总入口"
 keywords:
   - 二十四节气
   - 节气
