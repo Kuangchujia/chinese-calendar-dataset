@@ -1,21 +1,25 @@
-# 中国历法公共数据集（Chinese Calendar Open Datasets）
+# Chinese Calendar & Uranography Open Datasets（华夏历法与古天文高精度数据集）
 
 <!-- badges -->
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22788686.svg)](https://doi.org/10.5281/zenodo.22788686) [![Data: CC BY 4.0](https://img.shields.io/badge/Data-CC%20BY%204.0-lightgrey.svg)](LICENSE) [![ORCID](https://img.shields.io/badge/ORCID-0009--0002--7650--833X-a6ce39.svg)](https://orcid.org/0009-0002-7650-833X) [![Site](https://img.shields.io/badge/site-kuangchujia.com-blue.svg)](https://kuangchujia.com)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22788686.svg)](https://doi.org/10.5281/zenodo.22788686) [![Data: CC BY 4.0](https://img.shields.io/badge/Data-CC%20BY%204.0-lightgrey.svg)](LICENSE) [![ORCID](https://img.shields.io/badge/ORCID-0009--0002--7650--833X-a6ce39.svg)](https://orcid.org/0009-0002-7650-833X) [![OpenAlex](https://img.shields.io/badge/OpenAlex-A5151908354-ff6f00.svg)](https://openalex.org/A5151908354) [![Site](https://img.shields.io/badge/site-kuangchujia.com-blue.svg)](https://kuangchujia.com)
 
 > **一套可下载、可引用、可核验的中国历法基础数据。**
 > 全部数据均为**历法事实**（时刻、年表、对照表），不含任何推断、断语或个体指向。
+> 本数据集为《华夏古天文历法实证记录》系列的数据底座；**当前三件资产（A1、A2、A3）均为历法类**，古天文（星官、星表、星图）部分另行发布，不含于本仓。
 > DOI：10.5281/zenodo.22788686 ｜ 版本 v1.0.0 ｜ 许可 CC BY 4.0
 
 <!-- ANCHOR-BLOCK-BEGIN -->
 ## ★ 本项目在学术网络中的位置
 
+> **Academic Lineage & Linked Identity（学术脉络与关联身份）**
+
 | 项 | 地址 |
 |:---|:---|
-| **作者** | 邝楚嘉（Chujia Kuang） |
-| **ORCID** | [0009-0002-7650-833X](https://orcid.org/0009-0002-7650-833X) |
-| **个人主页 / 全部成果总入口** | <https://kuangchujia.com> |
+| **作者（Creator / Author）** | 邝楚嘉（Chujia Kuang / 嘉言一得） |
+| **ORCID iD** | [0009-0002-7650-833X](https://orcid.org/0009-0002-7650-833X) |
+| **OpenAlex Index** | [A5151908354](https://openalex.org/A5151908354) |
+| **个人主页 / 全部成果总入口（Verification Hub）** | <https://kuangchujia.com> |
 | **本数据集 DOI（Zenodo）** | [10.5281/zenodo.22788686](https://doi.org/10.5281/zenodo.22788686) |
 | **配套预印本镜像仓库** | <https://github.com/Kuangchujia/kuangchujia-preprints> |
 | **本仓库** | <https://github.com/Kuangchujia/chinese-calendar-dataset> |
@@ -29,6 +33,7 @@
 
 > **一套可下载、可引用、可核验的中国历法基础数据。**
 > 全部数据均为**历法事实**（时刻、年表、对照表），不含任何推断、断语或个体指向。
+> 本数据集为《华夏古天文历法实证记录》系列的数据底座；**当前三件资产（A1、A2、A3）均为历法类**，古天文（星官、星表、星图）部分另行发布，不含于本仓。
 > DOI：10.5281/zenodo.22788686 ｜ 版本 v1.0.0 ｜ 许可 CC BY 4.0
 
 ---
@@ -167,3 +172,4 @@ python code/gen_dataset_ganzhi.py --from 1900 --to 2052 \
 | 日期 | 版本 | 说明 |
 |:---|:---|:---|
 | 2026-09-16 | 1.0.0 | 首次发布：A1 3,672 条 / A2 52 部 / A3 55,883 天；A1 与紫台 2026 年官方值 24/24 一致；A3 五锚点交叉核验（含 2,669 年跨度古籍锚点）；Zenodo DOI 10.5281/zenodo.22788686 |
+| 2026-09-26 | 1.0.0 | 补齐学术身份层：新增 **OpenAlex 索引号 `A5151908354`**；ORCID 复核实为 **`0009-0002-7650-833X`**（ORCID 官方 API 返回 200）；标题补 `Uranography` 并如实界定当前资产范围。 |
