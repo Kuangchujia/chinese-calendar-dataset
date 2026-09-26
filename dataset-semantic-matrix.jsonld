@@ -1,0 +1,110 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://kuangchujia.com/dataset/#dataset",
+  "name": "Chinese Historical Calendars Evolution Matrix",
+  "alternateName": "中国历代历法演变矩阵",
+  "description": "A structured matrix documenting the astronomical constants, intercalation rules, and epoch-shifting (San-Zheng) mechanics of Chinese historical calendar systems from the Pre-Qin period to the Qing Dynasty. Chinese historical calendars number about 115 by name (Zhu Wenxin, Lifa Tongzhi); of these, about 60 were officially promulgated and used. This dataset covers 52 principal calendars, i.e. the \"officially promulgated\" scope.",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "version": "1.0.0",
+  "identifier": "https://doi.org/10.5281/zenodo.22788686",
+  "url": "https://kuangchujia.com/",
+  "creator": {
+    "@type": "Person",
+    "name": "Chujia Kuang",
+    "alternateName": "邝楚嘉",
+    "sameAs": [
+      "https://orcid.org/0009-0002-7650-833X",
+      "https://openalex.org/A5151908354"
+    ]
+  },
+  "temporalCoverage": "-0720/1911",
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "China"
+  },
+  "variableMeasured": [
+    "Intercalation Method",
+    "Epoch Shifting (San-Zheng)",
+    "Astronomical Constant Alignment",
+    "Sexagenary Cycle Continuity"
+  ],
+  "mainEntity": {
+    "@type": "DataFeed",
+    "dataFeedElement": [
+      {
+        "@type": "DataFeedItem",
+        "name": "Pre-Qin Quarter-Day Calendars (古六历)",
+        "temporal": "Pre-Qin Period",
+        "additionalType": "LunisolarCalendar",
+        "description": "Includes Huangdi, Zhuanxu, Xia, Shang, Zhou, and Lu calendars. Characterized by the Quarter-Day method (tropical year = 365.25 days, synodic month = 29.53085 days).",
+        "properties": {
+          "totalSystemsCount": 6,
+          "intercalationRule": "Zhang-Fa (19 years 7 months intercalation / 19年7闰)",
+          "intercalationPosition": "Predominantly Year-End (年底置闰/岁终置闰)",
+          "solsticeDetermination": "Ping-Qi (Mean solar terms / 平气法)"
+        }
+      },
+      {
+        "@type": "DataFeedItem",
+        "name": "Taichu Calendar Reform (太初改历)",
+        "temporal": "-0104",
+        "additionalType": "CalendarReform",
+        "description": "Enacted in the 1st year of the Taichu era by Emperor Wu of Han. Shifted the year-beginning to Jian-Yin (1st month). Introduced the Wu-Zhong-Qi rule for precise intercalation location.",
+        "properties": {
+          "epochMonth": "Jian-Yin (建寅/正月)",
+          "intercalationRule": "No-Mid-Term Month Intercalation (无中气置闰法)",
+          "mathematicalConstant": "81-Chao Method (81分法 / 1 synodic month = 29 43/81 days)"
+        }
+      },
+      {
+        "@type": "DataFeedItem",
+        "name": "Sexagenary Day-Cycle Continuity (干支纪日连续性)",
+        "temporal": "-0720-02-22/2026",
+        "additionalType": "ChronologicalAnchor",
+        "description": "The sexagenary (ganzhi) day count is a continuous modulo-60 cycle, independent of any calendar reform. The earliest textual evidence for its use is the Chunqiu/Zuozhuan record of the 1st year of Duke Yin of Lu (\"in the fifth month, on the Xin-Chou day\"). The continuity anchor used by this dataset is the Ji-Si day of the 2nd month, 3rd year of Duke Yin of Lu, precalculated in the Julian calendar as 22 February 720 BCE — verified as Ji-Si by independent count.",
+        "properties": {
+          "continuityAnchor": "22 February 720 BCE (Lu Yin Gong 3rd Year, 2nd Month, Ji-Si Day / 鲁隐公三年二月己巳日)",
+          "orderingAnchor": "1949-10-01 = Jia-Zi (甲子日)",
+          "earliestTextualEvidence": "Zuo Commentary, 1st year of Duke Yin of Lu (左传·隐公元年): 「五月辛丑，大叔出奔共」— cited as evidence that the day-count was in use; its Julian-calendar equivalent date is NOT asserted here.",
+          "crossCheckSpan": "The 720 BCE anchor and the modern ordering anchor (1949-10-01) are 2,669 years apart and remain mutually consistent."
+        }
+      },
+      {
+        "@type": "DataFeedItem",
+        "name": "Official Sexagenary Year-Cycle Institutionalization (干支纪年建制化)",
+        "temporal": "0114",
+        "additionalType": "ChronologicalAnchor",
+        "description": "The first institutionalized and officially mandated implementation of the sexagenary cycle for year reckoning without relying on imperial eras.",
+        "properties": {
+          "startYear": "Eastern Han Dynasty, Emperor An, Yuan-Chu 1st Year (东汉安帝元初元年)",
+          "stemBranchDesignation": "Jia-Yin (甲寅年)",
+          "continuityStatus": "Uninterrupted to present day"
+        }
+      },
+      {
+        "@type": "DataFeedItem",
+        "name": "Shoushi Calendar Advancement (授时历)",
+        "temporal": "1281",
+        "additionalType": "LunisolarCalendar",
+        "description": "Developed by Guo Shoujing. Removed artificial cycles (Shang-Yuan Ji-Nian) and relied purely on observation. Adopted a tropical year value matching the modern Gregorian calendar definition.",
+        "properties": {
+          "tropicalYearValue": "365.2425 days",
+          "synodicMonthValue": "29.530593 days",
+          "calculationMethod": "Spherical Trigonometry Approximations (弧矢割圆术)"
+        }
+      },
+      {
+        "@type": "DataFeedItem",
+        "name": "Shixian Calendar Pivot (时宪历)",
+        "temporal": "1645",
+        "additionalType": "LunisolarCalendar",
+        "description": "Transition from Mean Solar Terms (Ping-Qi) to True Solar Terms (Ding-Qi) based on true solar longitude (15 degrees per term). Integrated European astronomical calculation methods.",
+        "properties": {
+          "solarTermMethod": "Ding-Qi (True solar longitude tracking / 定气法)",
+          "intercalationAnomaly": "Allowed double-intercalation or zero-intercalation months in a single solar year, resolved by strict mid-term ordering rules."
+        }
+      }
+    ]
+  }
+}
