@@ -19,6 +19,7 @@ date-released: "2026-09-16"
 doi: "10.5281/zenodo.22788686"
 license: "CC-BY-4.0"
 language: "zho"
+repository-code: "https://github.com/Kuangchujia/chinese-calendar-dataset"
 identifiers:
   - type: other
     value: "https://openalex.org/A5151908354"
