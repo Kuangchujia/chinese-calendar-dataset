@@ -1,163 +1,156 @@
-# Chinese Calendar & Uranography Open Datasets（华夏历法与古天文高精度数据集）
+# Chinese Calendar & Uranography Open Datasets
 
-**中文 ｜ [English](README.en.md)**
+**[中文](README.zh.md) ｜ English**
 
 <!-- badges -->
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22788686.svg)](https://doi.org/10.5281/zenodo.22788686) [![Data: CC BY 4.0](https://img.shields.io/badge/Data-CC%20BY%204.0-lightgrey.svg)](LICENSE) [![ORCID](https://img.shields.io/badge/ORCID-0009--0002--7650--833X-a6ce39.svg)](https://orcid.org/0009-0002-7650-833X) [![OpenAlex](https://img.shields.io/badge/OpenAlex-A5151908354-ff6f00.svg)](https://openalex.org/A5151908354) [![Site](https://img.shields.io/badge/site-kuangchujia.com-blue.svg)](https://kuangchujia.com)
 
-> **一套可下载、可引用、可核验的中国历法基础数据。**
-> 全部数据均为**历法事实**（时刻、年表、对照表），不含任何推断、断语或个体指向。
-> 本数据集为《华夏古天文历法实证记录》系列的数据底座；**当前三件资产（A1、A2、A3）均为历法类**，古天文（星官、星表、星图）部分另行发布，不含于本仓。
-> DOI：10.5281/zenodo.22788686 ｜ 版本 v1.0.0 ｜ 许可 CC BY 4.0
-> **机器可读版（面向 AI Agent 与 LLM 爬虫）**：[`README_AI_AGENT.md`](README_AI_AGENT.md) —— 同一批事实的结构化声明、锚点表与自校验清单。
+> **A body of foundational Chinese calendrical data that can be downloaded, cited and checked.**
+> Every value is a **calendrical fact** (an instant, a chronology entry, a correspondence table). None of it is an inference, a verdict, or a pointer to any individual.
+> This dataset is the data foundation of the *Records of Chinese Historical Astronomy and Calendrics* series. **The three current assets (A1, A2, A3) are all calendrical**; the uranographical material (star officials, star catalogues, star charts) is published separately and is not included in this repository.
+> DOI: 10.5281/zenodo.22788686 ｜ Version v1.0.0 ｜ Licence CC BY 4.0
+> **Machine-readable edition (for AI agents and LLM crawlers):** [`README_AI_AGENT.md`](README_AI_AGENT.md) — structured statements of the same facts, with an anchor table and a self-check list.
 
 *Open, citable and checkable reference data for the Chinese calendar — solar-term instants, a chronology of calendar reforms, and a day-by-day sexagenary (ganzhi) table. Everything here is a calendrical fact — an instant, a date or a correspondence — with no inference, no judgement and nothing aimed at any individual. The dataset is the numerical basis of the "Records of Chinese Historical Astronomy and Calendrics" series; the three assets released so far (A1–A3) are all calendrical, while the uranographical material (star officers, star tables, star maps) is published separately. DOI: 10.5281/zenodo.22788686 · v1.0.0 · CC BY 4.0. A machine-readable edition is available in `README_AI_AGENT.md`.*
 
 <!-- ANCHOR-BLOCK-BEGIN -->
-## ★ 本项目在学术网络中的位置
+## ★ Where this project sits in the academic network
 
-> **Academic Lineage & Linked Identity（学术脉络与关联身份）**
+> **Academic Lineage & Linked Identity**
 
-| 项 | 地址 |
+| Item | Address |
 |:---|:---|
-| **作者（Creator / Author）** | 邝楚嘉（Chujia Kuang / 嘉言一得） |
+| **Author (Creator)** | Chujia Kuang (邝楚嘉 / pen name Jiayan Yide 嘉言一得) |
 | **ORCID iD** | [0009-0002-7650-833X](https://orcid.org/0009-0002-7650-833X) |
 | **OpenAlex Index** | [A5151908354](https://openalex.org/A5151908354) |
-| **个人主页 / 全部成果总入口（Verification Hub）** | <https://kuangchujia.com> |
-| **本数据集 DOI（Zenodo）** | [10.5281/zenodo.22788686](https://doi.org/10.5281/zenodo.22788686) |
-| **配套预印本镜像仓库** | <https://github.com/Kuangchujia/kuangchujia-preprints> |
-| **本仓库** | <https://github.com/Kuangchujia/chinese-calendar-dataset> |
+| **Home site / umbrella entry point to all outputs (Verification Hub)** | <https://kuangchujia.com> |
+| **Dataset DOI (Zenodo)** | [10.5281/zenodo.22788686](https://doi.org/10.5281/zenodo.22788686) |
+| **Companion preprint mirror repository** | <https://github.com/Kuangchujia/kuangchujia-preprints> |
+| **This repository** | <https://github.com/Kuangchujia/chinese-calendar-dataset> |
 
-**本仓库是什么**：本数据集三件资产（A1 二十四节气交节时刻／A2 历代历法改革年表／A3 干支纪日对照表）的**生成代码与可复算入口**。数据由 `code/` 下三个脚本自算而成，凡引用本数据集，请同时注明其 Zenodo DOI。
+**What this repository is**: the **generating code and reproducible entry point** for the three assets of this dataset (A1 solar-term instants, A2 chronology of calendar reforms, A3 sexagenary day table). The data are computed by the three scripts under `code/`; when citing this dataset, please cite its Zenodo DOI as well.
 
-**配套预印本**：本数据集为「中国历法与传统天文星象」系列科普稿预印本（共 11 篇）提供历法事实依据——其中节气交节时刻支撑《立春不是一整天，只有一秒钟》，干支纪日支撑《干支：从一棵树到二十二个字》。该系列预印本镜像见 <https://github.com/Kuangchujia/kuangchujia-preprints>，逐篇正式记录见 Zenodo 与 [preprints.org](https://www.preprints.org)。
+**Companion preprints**: this dataset supplies the calendrical facts behind a series of eleven popular-science preprints on Chinese calendrics and traditional uranography. The solar-term instants underpin *Lichun is not a whole day — only a single second*; the sexagenary day table underpins *Ganzhi: from one tree to twenty-two characters*. The preprint mirror is at <https://github.com/Kuangchujia/kuangchujia-preprints>, with a formal record for each piece on Zenodo and [preprints.org](https://www.preprints.org).
 <!-- ANCHOR-BLOCK-END -->
 
 ---
 
-> **一套可下载、可引用、可核验的中国历法基础数据。**
-> 全部数据均为**历法事实**（时刻、年表、对照表），不含任何推断、断语或个体指向。
-> 本数据集为《华夏古天文历法实证记录》系列的数据底座；**当前三件资产（A1、A2、A3）均为历法类**，古天文（星官、星表、星图）部分另行发布，不含于本仓。
-> DOI：10.5281/zenodo.22788686 ｜ 版本 v1.0.0 ｜ 许可 CC BY 4.0
+## I. What the dataset contains
 
----
-
-## 一、数据集包含什么
-
-| # | 资产 | 文件 | 记录数 | 覆盖范围 |
+| # | Asset | File | Records | Coverage |
 |:--:|:---|:---|:--:|:---|
-| **A1** | **二十四节气交节时刻** | `01-二十四节气交节时刻/data/solar_terms_1900_2052.csv`<br>`.json` | **3,672** 条 | 公元 **1900—2052** 年，逐年逐节气，精确到秒 |
-| **A2** | **历代历法改革年表** | `02-历代历法改革年表/data/calendar_reforms.csv` | **52** 部历法 | 古六历 → 太初历 → …… → 授时历 → 时宪历 → 公历 |
-| **A3** | **干支纪日对照表** | `03-干支纪日对照表/data/ganzhi_day_1900_2052.csv` | **55,883** 天 | 公元 **1900-01-01 — 2052-12-31**，逐日 |
+| **A1** | **Instants of the twenty-four solar terms** | `01-二十四节气交节时刻/data/solar_terms_1900_2052.csv`<br>`.json` | **3,672** | CE **1900—2052**, term by term and year by year, precise to the second |
+| **A2** | **Chronology of historical calendar reforms** | `02-历代历法改革年表/data/calendar_reforms.csv` | **52** calendars | the Six Ancient Calendars → Taichu → … → Shoushi → Shixian → Gregorian |
+| **A3** | **Sexagenary day table** | `03-干支纪日对照表/data/ganzhi_day_1900_2052.csv` | **55,883** days | **1900-01-01 — 2052-12-31**, day by day |
 
-每件数据旁均附**核验表**（`verification_*.csv`），把本数据的推算值与权威公布值／文献记载逐条并列，便于使用者独立复核。
+Every asset ships with a **verification table** (`verification_*.csv`) that sets the computed values side by side with authoritative published values and documentary records, so that users can re-check them independently.
 
 ---
 
-## 二、A1 · 二十四节气交节时刻
+## II. A1 · Instants of the twenty-four solar terms
 
-**定义**：依 **GB/T 33661-2017《农历的编算和颁行》**——二十四节气是「太阳地心视黄经达 15° 整数倍的**时刻**」。
+**Definition**: per **GB/T 33661-2017 *Calculation and promulgation of the Chinese calendar*** — the twenty-four solar terms are the **instants** at which the Sun's geocentric apparent ecliptic longitude reaches an integral multiple of 15°.
 
-**字段**：`year` · `term_index`(1–24) · `term` · `solar_longitude_deg` · `beijing_date` · `beijing_time` · `utc_date` · `utc_time` · `jd_utc`
+**Fields**: `year` · `term_index` (1–24) · `term` · `solar_longitude_deg` · `beijing_date` · `beijing_time` · `utc_date` · `utc_time` · `jd_utc`
 
-**算法**：以 JPL DE421 星历（公有领域）＋ Skyfield（MIT 许可）计算太阳地心视黄经，用真黄道历元（`ecliptic_latlon(epoch="date")`），再以二分法求根到秒。
+**Algorithm**: the Sun's geocentric apparent ecliptic longitude is computed from the JPL DE421 ephemeris (public domain) together with Skyfield (MIT licence), using the true ecliptic of date (`ecliptic_latlon(epoch="date")`), and the root is then located by bisection to the second.
 
-**精度与核验**：与**中国科学院紫金山天文台《二〇二六年日历资料》**公布的 24 个官方值逐条比对——
+**Accuracy and verification**: compared item by item with the 24 official values published in the Purple Mountain Observatory's *Calendar Data for 2026* —
 
-| 指标 | 结果 |
+| Metric | Result |
 |:---|:---|
-| 最大偏差 | **30 秒** |
-| 平均偏差 | **11.4 秒** |
-| 四舍五入到分钟后一致 | **24 / 24** |
+| Maximum deviation | **30 seconds** |
+| Mean deviation | **11.4 seconds** |
+| Agreement after rounding to the minute | **24 / 24** |
 
-> **使用建议**：需要与官方历书完全一致时，以紫金山天文台公布值为准；本数据的价值在于**跨度长（153 年）、精度到秒、算法完全公开可复算**。
+> **How to use it**: where exact agreement with the official almanac is required, take the values published by the Purple Mountain Observatory. What this data offers is a **long span (153 years), second-level precision, and a fully public, reproducible algorithm**.
 
-**范围上限为何是 2052**：JPL DE421 星历覆盖至 2053-10-08，实测 2053-12-31 已越界。为保证全表无外推，上界取 2052。
+**Why the upper bound is 2052**: the JPL DE421 ephemeris runs from 1899-07-28 to 2053-10-08 (measured: 2053-12-31 already falls outside). So that the entire table is interpolated within the ephemeris with no extrapolation, the upper bound is set at 2052.
 
-**A2/A3 的节气字段**亦取自本表（A3 的「所在节气／节气月」由 A1 数据联结）。
-
----
-
-## 三、A2 · 历代历法改革年表
-
-**内容**：52 部历法的 **行用起止年 · 主要编者 · 岁首（斗建）· 重大改动**，并标出**五次大改革**（太初历 → 大明历 → 戊寅元历 → 授时历 → 时宪历）。
-
-**字段**：`序号` · `历法名` · `朝代_政权` · `行用起年` · `行用止年` · `行用起年_数值` · `行用止年_数值` · `主要编者` · `岁实_回归年_日` · `朔望月_日` · `岁首_斗建` · `重大改动` · `依据`
-
-**数值列说明**：`_数值` 列为纯整数年，公元前以负数表示（如「前 104 年」＝ `-104`），便于程序处理。
-
-**岁实列只收录有权威来源者（11 / 52 行）**；其余留空，**不以推测填补**。空缺本身即信息——它说明该历法的岁实值在公开权威材料中不易查得，而非「等于 0」。
-
-**考异**：`data/kaoyi_discrepancies.csv` 收录 **4 处来源不一致**（如太初历行用止年、大明历起年、淳熙／会元历年份、授时历起年），并列两源说法与本表处理，**不给结论**。
+**The solar-term fields of A2/A3** are taken from this table as well (A3's "solar term in force / solar-term month" is joined from the A1 data).
 
 ---
 
-## 四、A3 · 干支纪日对照表
+## III. A2 · Chronology of historical calendar reforms
 
-**内容**：1900—2052 年**逐日**的 **日干支 · 干支序号(1–60) · 旬 · 所在节气 · 节气月（月建）**，以及下一节气名称与时刻。
+**Content**: for each of 52 calendars — **the years in which it was in use, its principal compilers, its year-beginning (the branch of the month), and its major changes** — with the **five great reforms** marked (Taichu → Daming → Wuyin yuan → Shoushi → Shixian).
 
-**干支纪日为何可与公历对照**：干支纪日是自商代以来**连续不断的六十日循环**，不与任何月相或太阳位置挂钩。因此只要确定**一个**锚点日，全序列即唯一确定。
+**Fields**: `序号` · `历法名` · `朝代_政权` · `行用起年` · `行用止年` · `行用起年_数值` · `行用止年_数值` · `主要编者` · `岁实_回归年_日` · `朔望月_日` · `岁首_斗建` · `重大改动` · `依据`
 
-**定序锚点**：**1949-10-01 ＝ 甲子日**（百度百科「甲子日」词条、多个万年历站、八字教学教例三源一致）。该锚点位于现代、无历法换算歧义。
+**Note on the numeric columns**: the `_数值` columns hold plain integer years, with BCE given as a negative number (e.g. "前 104 年" = `-104`), for ease of programmatic use.
 
-**交叉核验（`data/verification_anchors.csv`）**：
+**The length-of-year column records only those values with an authoritative source (11 of 52 rows)**; the rest are left empty and **are not filled in by conjecture**. The blank is itself information — it means the value could not be traced to a reliable source among the public materials consulted for this compilation, not that it is zero.
 
-| 日期 | 文献／来源所称 | 本表推算 | 结果 |
+**Textual variants**: `data/kaoyi_discrepancies.csv` records **4 points on which the sources disagree** (e.g. the year the Taichu calendar ceased to be used, the starting year of the Daming calendar, the years of the Chunxi and Huiyuan calendars, the starting year of the Shoushi calendar). It sets the two readings side by side together with this table's handling, and **gives no verdict**.
+
+---
+
+## IV. A3 · Sexagenary day table
+
+**Content**: for every day from 1900 to 2052 — the **day's stem-branch pair · its sexagenary index (1–60) · its ten-day week · the solar term in force · the solar-term month (month branch)** — plus the name and instant of the next solar term.
+
+**Why sexagenary day-recording can be aligned with the Gregorian calendar**: the sexagenary day count is a **continuous sixty-day cycle** running unbroken since the Shang dynasty, tied to no lunar phase and no solar position. Once **one** anchor day is fixed, therefore, the whole sequence is uniquely determined.
+
+**Ordering anchor**: **1949-10-01 = a Jia-Zi day** (three sources agree: the Baidu Baike entry for "Jia-Zi day", several perpetual-calendar sites, and worked examples in bazi teaching materials). The anchor lies in the modern era and involves no calendar-conversion ambiguity.
+
+**Cross-verification (`data/verification_anchors.csv`)**:
+
+| Date | As stated by the source | Counted by this table | Result |
 |:---|:---:|:---:|:---|
-| 1590-12-22 | 甲子 | 甲子 | 一致 |
-| 1861-11-11 | 甲子 | 甲子 | 一致 |
-| **1949-10-01** | 甲子 | 甲子 | **定序锚点** |
-| 2025-12-21 | 甲子 | 甲子 | 一致 |
-| **公元前 720-02-22** | **己巳** | **己巳** | **一致** |
-| 1965-12-22 | 甲子 | 庚戌 | ❌ 判该来源有误（见下） |
+| 1590-12-22 | Jia-Zi | Jia-Zi | agree |
+| 1861-11-11 | Jia-Zi | Jia-Zi | agree |
+| **1949-10-01** | Jia-Zi | Jia-Zi | **ordering anchor** |
+| 2025-12-21 | Jia-Zi | Jia-Zi | agree |
+| **720 BCE, 02-22** | **Ji-Si** | **Ji-Si** | **agree** |
+| 1965-12-22 | Jia-Zi | Geng-Xu | ❌ that source judged erroneous (see below) |
 
-**两点必须如实说明**：
+**Two points that must be stated**:
 
-1. **古籍锚点自洽，是强验证。** 《春秋》隐公三年「二月己巳，日有食之」是中国第一次明确记载日期的日食。其**儒略历前推日期为公元前 720 年 2 月 22 日**，本表独立推算得 **己巳**，与文献完全吻合——**与定序锚点相隔 2,669 年而自洽**，说明六十日循环的连续性假设成立。
-   > ⚠ **复算时务必注意**：公元前 720 年对应**天文纪年 −719**（无公元 0 年）。若按 −720 计算，会整体差 1 日而得出错误结论。
+1. **The classical anchor is self-consistent — a strong verification.** The entry in the *Chunqiu* (Spring and Autumn Annals) for the third year of Duke Yin of Lu, "in the second month, on a Ji-Si day, there was an eclipse of the Sun", is the first Chinese record of a solar eclipse with an explicit date. Its Julian-calendar date back-calculated is **22 February 720 BCE**, and this table independently counts **Ji-Si**, in complete agreement with the record — **self-consistent with the ordering anchor across a span of 2,669 years**, which shows that the assumption of an unbroken sixty-day cycle holds.
+   > ⚠ **When re-computing, mind the era convention**: 720 BCE corresponds to **astronomical year −719** (there is no year 0). Counting from −720 gives a one-day error across the board and an incorrect conclusion.
 
-2. **一条来源有误，已如实标注。** 公开材料中「1965-12-22 为甲子日」的说法，本表推算为**庚戌**（1965 年 12 月内无甲子日；最近的一个是 1966-01-05）。本表**未因该条调整锚点**。
+2. **One source is erroneous, and is marked as such.** The claim found in public materials that "1965-12-22 was a Jia-Zi day" counts as **Geng-Xu** in this table (there is no Jia-Zi day in December 1965; the nearest is 1966-01-05). **This table did not adjust the anchor on account of that entry.**
 
-**1582 年历法切换**：1582-10-15 起用格里高利历，之前用儒略历前推。本数据集覆盖 1900 年以后，不涉及该切换，但生成器已实现该规则以备扩展。
-
----
-
-## 五、权利与许可
-
-- 本数据集采用 **Creative Commons Attribution 4.0 International（CC BY 4.0）**。你可以自由使用、复制、修改、分发，包括商业用途，**条件是署名**。
-- **许可文本**：具有法律效力的完整文本见 [`LICENSE`](LICENSE)（CC BY 4.0 官方英文全文）；[`NOTICE.md`](NOTICE.md) 为中文对照说明，含本数据集要求的署名格式。
-- **依据**：《中华人民共和国著作权法》**第五条**明列「**历法、通用数表、通用表格和公式**」不适用该法。历法数据本身即为可自由使用的公共品。
-- 未选用 CC BY-SA：其「相同方式共享」条款会传染给使用者，反而降低被采用意愿。
-- 上游权利：JPL DE421 星历为 NASA 喷气推进实验室出品，**公有领域**；Skyfield 为 MIT 许可。
-
-数据集 DOI：`10.5281/zenodo.22788686` ｜ 永久链接：<https://doi.org/10.5281/zenodo.22788686>
-
-**署名格式（请照此引用）**：
-
-> 邝楚嘉（Chujia Kuang）. 中国历法公共数据集：二十四节气交节时刻 / 历代历法改革年表 / 干支纪日对照表 [Dataset]. Zenodo. 2026. v1.0.0. CC BY 4.0. DOI: 10.5281/zenodo.22788686
+**The 1582 calendar switch**: the Gregorian calendar is used from 1582-10-15, with the Julian calendar back-calculated before that. This dataset covers the period after 1900 and so does not touch the switch, but the generator implements the rule ready for extension.
 
 ---
 
-## 六、使用边界（请一并阅读）
+## V. Rights and licence
 
-1. **本数据集只含历法事实**——时刻、年表、对照表。**不含任何判断、断语、吉凶宜忌、神煞或个体指向**。
-2. **A1 的权威顺位**：中国境内标准为紫金山天文台《中国天文年历》／《日历资料》（依 GB/T 33661-2017）。本数据为**独立的第二来源**，用于复算与长跨度查询；**引用具体节气时刻时，宜同时注明官方历书**。
-3. **A2 为编纂表，非原始文献**：行用年、编者取自公开百科年表两源对照；**岁实等数值仅收录有明确来源者**；4 处来源分歧已单列考异。**引用具体年份前请查考异表。**
-4. **A3 的日干支无理论误差**（纯计数）；其正确性取决于锚点。锚点已用 4 个现代记载 ＋ 1 个古籍记载交叉验证。
-5. **A3 的「节气月（月建）」仅按十二节（立春、惊蛰……小寒）划分**，不涉及年干、不涉五虎遁等任何推演。
+- This dataset is released under **Creative Commons Attribution 4.0 International (CC BY 4.0)**. You are free to use, copy, modify and distribute it, including commercially, **on condition of attribution**.
+- **Licence text**: the legally binding full text is in [`LICENSE`](LICENSE) (the official English text of CC BY 4.0); [`NOTICE.md`](NOTICE.md) is a Chinese-language companion with the attribution format this dataset requests.
+- **Basis**: Article 5 of the *Copyright Law of the People's Republic of China* expressly lists "calendars, general tables of data, general tables and formulas" as outside the scope of that law. Calendrical data are themselves a freely usable public good.
+- CC BY-SA was not chosen: its "share-alike" clause propagates to users and in fact reduces willingness to adopt.
+- Upstream rights: the JPL DE421 ephemeris is produced by NASA's Jet Propulsion Laboratory and is in the **public domain**; Skyfield is under the MIT licence.
+
+Dataset DOI: `10.5281/zenodo.22788686` ｜ Permanent link: <https://doi.org/10.5281/zenodo.22788686>
+
+**Attribution format (please cite as follows)**:
+
+> Chujia Kuang (邝楚嘉). Chinese Calendar Open Datasets: Instants of the Twenty-Four Solar Terms / Chronology of Historical Calendar Reforms / Sexagenary Day Table [Dataset]. Zenodo. 2026. v1.0.0. CC BY 4.0. DOI: 10.5281/zenodo.22788686
 
 ---
 
-## 七、复算与再生成
+## VI. Scope limits (please read alongside)
 
-`code/` 目录下为三个生成脚本（Python 3，依赖 `skyfield` 与 `skyfield-data`）：
+1. **This dataset contains calendrical facts only** — instants, chronology entries, correspondence tables. **It contains no judgement, no verdict, no auspicious-or-inauspicious guidance, no shensha, and no reference to any individual.**
+2. **Authority ranking for A1**: the standard within China is the Purple Mountain Observatory's *Chinese Astronomical Almanac* / *Calendar Data* (under GB/T 33661-2017). This data is an **independent second source**, intended for re-computation and long-span queries; **when citing a particular solar-term instant, cite the official almanac as well.**
+3. **A2 is a compiled table, not a primary document**: the years of use and the compilers are taken from two public encyclopaedic chronologies set against each other; **numeric values such as the length of the year are recorded only where a source is explicit**; the 4 points of disagreement are listed separately as textual variants. **Consult the variant table before citing any particular year.**
+4. **A3's day stem-branch pairs carry no theoretical error** (they are pure counting); their correctness depends entirely on the anchor. The anchor has been cross-verified against 4 modern records plus 1 classical record.
+5. **A3's "solar-term month (month branch)" is divided by the twelve *jie* alone** (Lichun, Jingzhe … Xiaohan). It involves no year stem and no five-tiger-escape or any other derivation.
 
-| 脚本 | 产出 |
+---
+
+## VII. Re-computation and regeneration
+
+`code/` holds three generating scripts (Python 3, requiring `skyfield` and `skyfield-data`):
+
+| Script | Output |
 |:---|:---|
-| `gen_dataset.py` | A1 节气时刻（含与紫台官方值比对表） |
-| `gen_dataset_calendar_reforms.py` | A2 年表与考异表 |
-| `gen_dataset_ganzhi.py` | A3 干支纪日（含锚点核验） |
+| `gen_dataset.py` | A1 solar-term instants (including the comparison table against the Purple Mountain Observatory's official values) |
+| `gen_dataset_calendar_reforms.py` | A2 chronology and the variant table |
+| `gen_dataset_ganzhi.py` | A3 sexagenary day table (including anchor verification) |
 
 ```bash
 python -m pip install skyfield skyfield-data
@@ -169,13 +162,17 @@ python code/gen_dataset_ganzhi.py --from 1900 --to 2052 \
     --prev "01-二十四节气交节时刻/data/preceding_boundary.csv" --out .
 ```
 
-> **`--prev-out` / `--prev` 不可省**：1900 年头 5 天需用 1899 年冬至定节气归属与月建，主表自 1900 年起不含该行。省略会把首 5 天误归到当年小寒。
+> **`--prev-out` / `--prev` cannot be omitted**: the first five days of 1900 need the 1899 winter solstice to fix their solar term and month branch, and the main table, starting at 1900, does not contain that row. Omitting it assigns those first five days to that year's Xiaohan by mistake.
 
 ---
 
-## 八、修订记录
+## VIII. Revision history
 
-| 日期 | 版本 | 说明 |
+| Date | Version | Notes |
 |:---|:---|:---|
-| 2026-09-16 | 1.0.0 | 首次发布：A1 3,672 条 / A2 52 部 / A3 55,883 天；A1 与紫台 2026 年官方值 24/24 一致；A3 五锚点交叉核验（含 2,669 年跨度古籍锚点）；Zenodo DOI 10.5281/zenodo.22788686 |
-| 2026-09-26 | 1.0.0 | 补齐学术身份层：新增 **OpenAlex 索引号 `A5151908354`**；ORCID 复核实为 **`0009-0002-7650-833X`**（ORCID 官方 API 返回 200）；标题补 `Uranography` 并如实界定当前资产范围。**许可面**：`LICENSE` 换为 CC BY 4.0 官方英文全文（GitHub 识别为 `CC-BY-4.0`），原中文对照说明移入 `NOTICE.md`；`CITATION.cff` 与 `.zenodo.json` 补 ORCID 与 OpenAlex 作者号；仓元信息补作者站点与 topics。 |
+| 2026-09-16 | 1.0.0 | First release: A1 3,672 entries / A2 52 calendars / A3 55,883 days; A1 agrees with the Purple Mountain Observatory's 2026 official values 24/24; A3 cross-verified against five anchors (including a classical anchor spanning 2,669 years); Zenodo DOI 10.5281/zenodo.22788686 |
+| 2026-09-26 | 1.0.0 | Academic identity layer completed: added the **OpenAlex index `A5151908354`**; ORCID re-verified as **`0009-0002-7650-833X`** (the ORCID public API returns 200); the title gained `Uranography` and the current scope of assets was delimited as it stands. **Licensing**: `LICENSE` replaced with the official English text of CC BY 4.0 (recognised by GitHub as `CC-BY-4.0`), with the former Chinese companion moved to `NOTICE.md`; `CITATION.cff` and `.zenodo.json` gained the ORCID and OpenAlex author identifiers; repository metadata gained the author's site and topics. |
+
+---
+
+*This is the English edition of the repository README. Where the two editions differ, the Chinese edition [`README.zh.md`](README.zh.md) governs the repository description; both carry the same tables, row for row.*
