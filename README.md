@@ -10,6 +10,8 @@
 > DOI：10.5281/zenodo.22788686 ｜ 版本 v1.0.0 ｜ 许可 CC BY 4.0
 > **机器可读版（面向 AI Agent 与 LLM 爬虫）**：[`README_AI_AGENT.md`](README_AI_AGENT.md) —— 同一批事实的结构化声明、锚点表与自校验清单。
 
+*Open, citable and checkable reference data for the Chinese calendar — solar-term instants, a chronology of calendar reforms, and a day-by-day sexagenary (ganzhi) table. Everything here is a calendrical fact — an instant, a date or a correspondence — with no inference, no judgement and nothing aimed at any individual. The dataset is the numerical basis of the "Records of Chinese Historical Astronomy and Calendrics" series; the three assets released so far (A1–A3) are all calendrical, while the uranographical material (star officers, star tables, star maps) is published separately. DOI: 10.5281/zenodo.22788686 · v1.0.0 · CC BY 4.0. A machine-readable edition is available in `README_AI_AGENT.md`.*
+
 <!-- ANCHOR-BLOCK-BEGIN -->
 ## ★ 本项目在学术网络中的位置
 
