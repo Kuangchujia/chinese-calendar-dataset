@@ -1,84 +1,88 @@
-# A3 · 干支纪日对照表（1900—2052）
+# A3 · Sexagenary Day Table (1900—2052)
 
-**中文 ｜ [English](README.en.md)**
+**[中文](README.zh.md) ｜ English**
 
-## 这是什么
+## What this is
 
-公元 **1900-01-01 至 2052-12-31** 共 **55,883 天**的逐日干支数据，并标出每一天所属的**旬**、**所在节气**与**节气月（月建）**。
+Day-by-day sexagenary data for the **55,883 days** from **1900-01-01 to 2052-12-31**, marking for each day its **ten-day week**, the **solar term in force**, and the **solar-term month (month branch)**.
 
-## 干支纪日为什么特殊
+## Why sexagenary day-recording is special
 
-年柱有立春分界、月柱有节气分界、时柱有十二时辰——都有规律可循。**唯独日柱，没有简单的公式**：公历有闰年与大小月，而干支纪日是**连续不断的六十日循环**，两者节奏不同。
+The year pillar is divided at Lichun, the month pillar at the solar terms, the hour pillar by the twelve double-hours — all of them follow a rule. **The day pillar alone has no simple formula**: the Gregorian calendar has leap years and months of 30 or 31 days, whereas the sexagenary day count is a **continuous sixty-day cycle**, and the two keep different time.
 
-正因如此，干支纪日自商代以来两千余年从未间断，是**世界上连续使用最长的纪日体系**。它也因此可以「反过来」当作一个精确的日计数器——**只要确定一个锚点日，全序列即唯一确定**。
+For that reason the sexagenary day count has run unbroken for more than two thousand years since the Shang dynasty, and is **the longest continuously used day-counting system in the world**. It can therefore be used "in reverse" as an exact day counter — **fix one anchor day and the whole sequence is uniquely determined**.
 
-## 文件
+## Files
 
-| 文件 | 说明 |
+| File | Notes |
 |:---|:---|
-| `data/ganzhi_day_1900_2052.csv` | 主数据表，55,883 行 |
-| `data/verification_anchors.csv` | 锚点核验表 |
+| `data/ganzhi_day_1900_2052.csv` | Main table, 55,883 rows |
+| `data/verification_anchors.csv` | Anchor verification table |
 
-## 字段
+## Fields
 
-| 字段 | 含义 |
+| Field | Meaning |
 |:---|:---|
-| `date` | 公历日期 `YYYY-MM-DD` |
-| `year` / `month` / `day` | 年月日分量 |
-| `weekday` | 星期，**1＝周一 … 7＝周日**（ISO 8601） |
-| `jdn` | 儒略日数（整数，对应当日正午） |
-| `ganzhi_day` | 日干支，如「甲子」 |
-| `ganzhi_index_1_60` | 干支序号，**1＝甲子 … 60＝癸亥** |
-| `xun` | 所在旬，如「甲子旬」 |
-| `solar_term` | 该日所在的节气（最近一个已交的节气） |
-| `solar_term_month_branch` | 节气月（月建）地支，按十二**节**划分 |
-| `next_term` / `next_term_datetime` | 下一个节气的名称与交节时刻（北京时间） |
+| `date` | Gregorian date, `YYYY-MM-DD` |
+| `year` / `month` / `day` | Year, month and day components |
+| `weekday` | Day of the week, **1 = Monday … 7 = Sunday** (ISO 8601) |
+| `jdn` | Julian Day Number (integer, corresponding to noon of that day) |
+| `ganzhi_day` | The day's stem-branch pair, e.g. "甲子" (Jia-Zi) |
+| `ganzhi_index_1_60` | Sexagenary index, **1 = Jia-Zi … 60 = Gui-Hai** |
+| `xun` | The ten-day week it falls in, e.g. "甲子旬" |
+| `solar_term` | The solar term in force that day (the most recent term already reached) |
+| `solar_term_month_branch` | The earthly branch of the solar-term month (month branch), divided by the twelve ***jie*** |
+| `next_term` / `next_term_datetime` | The name and instant (Beijing time) of the next solar term |
 
-**关于 `solar_term_month_branch`**：仅按十二**节**（立春、惊蛰、清明、立夏、芒种、小暑、立秋、白露、寒露、立冬、大雪、小寒）划分，立春起寅月。**不涉及年干、不涉五虎遁等任何推演**——它只是「以节气划分的月份」这一历法结构本身。
+**About `solar_term_month_branch`**: it is divided by the twelve ***jie*** alone (Lichun, Jingzhe, Qingming, Lixia, Mangzhong, Xiaoshu, Liqiu, Bailu, Hanlu, Lidong, Daxue, Xiaohan), with the Yin month beginning at Lichun. **It involves no year stem and no five-tiger-escape or any other derivation** — it is simply the calendrical structure of "months divided by solar terms".
 
-## 定序锚点
+## Ordering anchor
 
-**1949-10-01 ＝ 甲子日。**
+**1949-10-01 = a Jia-Zi day.**
 
-来源三源一致：百度百科「甲子日」词条明载「中华人民共和国成立日（1949年10月1日）即为甲子日」；多个万年历站查询结果一致；常见八字教学教例亦以该日为甲子日。
+Three sources agree: the Baidu Baike entry for "Jia-Zi day" states explicitly that "the day the People's Republic of China was founded (1 October 1949) was a Jia-Zi day"; several perpetual-calendar sites return the same result; and common worked examples in bazi teaching materials also take that day as Jia-Zi.
 
-选它作锚点的理由：位于现代、**不涉及任何历法换算歧义**。
+Why it was chosen as the anchor: it lies in the modern era and **involves no calendar-conversion ambiguity of any kind**.
 
-## 交叉核验（`data/verification_anchors.csv`）
+## Cross-verification (`data/verification_anchors.csv`)
 
-| 日期 | 文献／来源所称 | 本表推算 | 结果 |
+| Date | As stated by the source | Counted by this table | Result |
 |:---|:---:|:---:|:---|
-| 1590-12-22 | 甲子 | 甲子 | 一致 |
-| 1861-11-11 | 甲子 | 甲子 | 一致 |
-| **1949-10-01** | 甲子 | 甲子 | **定序锚点** |
-| 2025-12-21 | 甲子 | 甲子 | 一致 |
-| **公元前 720-02-22** | **己巳** | **己巳** | **一致（跨度 2,669 年）** |
-| 1965-12-22 | 甲子 | 庚戌 | ❌ 判该来源有误 |
+| 1590-12-22 | Jia-Zi | Jia-Zi | agree |
+| 1861-11-11 | Jia-Zi | Jia-Zi | agree |
+| **1949-10-01** | Jia-Zi | Jia-Zi | **ordering anchor** |
+| 2025-12-21 | Jia-Zi | Jia-Zi | agree |
+| **720 BCE, 02-22** | **Ji-Si** | **Ji-Si** | **agree (span 2,669 years)** |
+| 1965-12-22 | Jia-Zi | Geng-Xu | ❌ that source judged erroneous |
 
-### 逐条说明
+### Item by item
 
-**1. 古籍锚点自洽——这是本表最强的一处验证。**
+**1. The classical anchor is self-consistent — the strongest verification this table has.**
 
-《春秋》隐公三年「**二月己巳，日有食之**」是中国典籍中第一次明确记载日期的日食记载。其儒略历前推日期为**公元前 720 年 2 月 22 日**，本表独立推算得 **己巳**，与文献完全吻合。
+The entry in the *Chunqiu* (Spring and Autumn Annals) for the third year of Duke Yin of Lu — "**in the second month, on a Ji-Si day, there was an eclipse of the Sun**" — is the first solar eclipse in the Chinese corpus recorded with an explicit date. Its Julian-calendar date back-calculated is **22 February 720 BCE**, and this table independently counts **Ji-Si**, in complete agreement with the record.
 
-这个锚点与定序锚点相隔 **2,669 年**，两者自洽，说明「六十日循环自春秋以来连续未断」这一假设成立。
+That anchor lies **2,669 years** from the ordering anchor, and the two are self-consistent, which shows that the assumption "the sixty-day cycle has run unbroken since the Spring and Autumn period" holds.
 
-> ⚠ **复算时务必注意纪年口径**：公元前 720 年对应**天文纪年 −719**（公元前 1 年＝天文纪年 0，无公元 0 年）。若按 −720 计算，会整体差 1 日，从而误判「古籍与推算不符」。**这是一处极易踩的坑。**
+> ⚠ **When re-computing, mind the era convention**: 720 BCE corresponds to **astronomical year −719** (1 BCE = astronomical year 0; there is no year 0). Counting from −720 gives a one-day error across the board and an erroneous verdict that "the classical record and the computation disagree". **This is a trap very easily fallen into.**
 
-**2. 有一条来源有误，已如实标注。**
+**2. One source is erroneous, and is marked as such.**
 
-公开材料中「1965-12-22 为甲子日」之说，本表推算为**庚戌**。1965 年 12 月内并无甲子日（该月最近的一个甲子在 1966-01-05）。**本表未因该条调整锚点**——4 个现代锚点中 4 个一致，且古籍锚点自洽，足以支持定序锚点无误。
+The claim found in public materials that "1965-12-22 was a Jia-Zi day" counts as **Geng-Xu** in this table. There is no Jia-Zi day within December 1965 (the nearest in that month is 1966-01-05). **This table did not adjust the anchor on account of that entry**: four of the four modern anchors agree, and the classical anchor is self-consistent, which is enough to support the ordering anchor.
 
-## 历法切换
+## The calendar switch
 
-1582-10-15 起用格里高利历，之前用儒略历前推。**本数据集覆盖 1900 年以后，不涉及该切换**；生成器已实现该规则，便于扩展到更早年份。
+The Gregorian calendar is used from 1582-10-15, with the Julian calendar back-calculated before that. **This dataset covers the period after 1900 and so does not touch the switch**; the generator implements the rule so that it can be extended to earlier years.
 
-## 与 A1 的关系
+## Relation to A1
 
-`solar_term` 字段由 **A1 二十四节气交节时刻数据集**联结而来。**使用本表时建议同时引用 A1**，因为节气边界的精度直接决定 `solar_term` 与 `solar_term_month_branch` 的正确性。
+The `solar_term` field is joined from the **A1 Instants of the Twenty-Four Solar Terms** dataset. **When using this table, citing A1 as well is recommended**, because the precision of the solar-term boundaries directly determines the correctness of `solar_term` and `solar_term_month_branch`.
 
-**边界处理（一处易错点）**：本表首 5 天（1900-01-01 至 01-05）在 1900 年小寒之前，其所在节气应为**1899 年的冬至**。因此生成时除 A1 主表外，还须读入 A1 的 `data/preceding_boundary.csv`——否则这 5 天会被误归到 1900 年小寒、月建被误标为「丑」（正确为「子」）。
+**Boundary handling (one easily missed point)**: the first five days of this table (1900-01-01 to 01-05) fall before the 1900 Xiaohan, so the solar term in force for them is the **1899 winter solstice**. Generation therefore reads A1's `data/preceding_boundary.csv` in addition to the A1 main table — otherwise those five days are assigned to the 1900 Xiaohan by mistake and their month branch is marked "chou" instead of the correct "zi".
 
-## 权利
+## Rights
 
-CC BY 4.0。日干支为纯计数结果，无理论误差；其正确性完全取决于锚点，锚点已用 5 个记载交叉验证。
+CC BY 4.0. The day stem-branch pairs are the result of pure counting and carry no theoretical error; their correctness depends entirely on the anchor, which has been cross-verified against five records.
+
+---
+
+*This is the English edition of the sub-dataset README. The two editions carry the same tables, row for row. Where they differ, the Chinese edition [`README.zh.md`](README.zh.md) governs.*
