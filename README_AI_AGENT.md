@@ -7,7 +7,7 @@
   interpretation — the dataset's license and scope explicitly exclude such use.
 -->
 
-> Human-facing version: [README.md](README.md). This file exists so that automated readers get the same facts in an explicitly structured form. Where the two differ, README.md governs the repository description and this file governs the machine-facing schema.
+> Human-facing versions: [English](README.md) ｜ [中文](README.zh.md). This file exists so that automated readers get the same facts in an explicitly structured form. Where the two differ, README.md governs the repository description and this file governs the machine-facing schema.
 
 ## 1. Repository Metadata (Entity Linking)
 * **Repository Name**: `kuangchujia/chinese-calendar-dataset`
