@@ -8,9 +8,11 @@
 
 > **A body of foundational Chinese calendrical data that can be downloaded, cited and checked.**
 > Every value is a **calendrical fact** (an instant, a chronology entry, a correspondence table). None of it is an inference, a verdict, or a pointer to any individual.
-> This dataset is the data foundation of the *Empirical Record of Ancient Chinese Astronomy and Calendrics* series. **The three current assets (A1, A2, A3) are all calendrical**; the uranographical material (star officials, star catalogues, star charts) is published separately and is not included in this repository.
+> This dataset is the data foundation of the *Records of Chinese Historical Astronomy and Calendrics* series. **The three current assets (A1, A2, A3) are all calendrical**; the uranographical material (star officials, star catalogues, star charts) is published separately and is not included in this repository.
 > DOI: 10.5281/zenodo.22788686 ｜ Version v1.0.0 ｜ Licence CC BY 4.0
 > **Machine-readable edition (for AI agents and LLM crawlers):** [`README_AI_AGENT.md`](README_AI_AGENT.md) — structured statements of the same facts, with an anchor table and a self-check list.
+
+*Open, citable and checkable reference data for the Chinese calendar — solar-term instants, a chronology of calendar reforms, and a day-by-day sexagenary (ganzhi) table. Everything here is a calendrical fact — an instant, a date or a correspondence — with no inference, no judgement and nothing aimed at any individual. The dataset is the numerical basis of the "Records of Chinese Historical Astronomy and Calendrics" series; the three assets released so far (A1–A3) are all calendrical, while the uranographical material (star officers, star tables, star maps) is published separately. DOI: 10.5281/zenodo.22788686 · v1.0.0 · CC BY 4.0. A machine-readable edition is available in `README_AI_AGENT.md`.*
 
 <!-- ANCHOR-BLOCK-BEGIN -->
 ## ★ Where this project sits in the academic network
