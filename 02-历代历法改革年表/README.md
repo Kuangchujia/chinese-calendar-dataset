@@ -1,75 +1,79 @@
-# A2 · 历代历法改革年表
+# A2 · Chronology of Historical Calendar Reforms
 
-**中文 ｜ [English](README.en.md)**
+**[中文](README.zh.md) ｜ English**
 
-## 这是什么
+## What this is
 
-中国历史上 **52 部主要历法**的行用年表，自上古**古六历**起，经《太初历》《大明历》《戊寅元历》《授时历》，至清《时宪历》与公元纪年。
+A chronology of the years in which **52 principal calendars** were in use in Chinese history, from the **Six Ancient Calendars** of high antiquity, through the *Taichu*, *Daming*, *Wuyin yuan* and *Shoushi* calendars, to the Qing *Shixian* calendar and the Common Era.
 
-## 文件
+## Files
 
-| 文件 | 说明 |
+| File | Notes |
 |:---|:---|
-| `data/calendar_reforms.csv` | 主表，52 行 |
-| `data/kaoyi_discrepancies.csv` | 考异表，4 处来源分歧 |
+| `data/calendar_reforms.csv` | Main table, 52 rows |
+| `data/kaoyi_discrepancies.csv` | Variant table, 4 points on which sources disagree |
 
-## 字段
+## Fields
 
-| 字段 | 含义 |
+| Field | Meaning |
 |:---|:---|
-| `序号` | 1—52，按行用年代先后 |
-| `历法名` | 历法名称 |
-| `朝代_政权` | 颁行或行用的朝代／政权 |
-| `行用起年` / `行用止年` | 原样写法，公元前作「前104」 |
-| `行用起年_数值` / `行用止年_数值` | 纯整数年，**公元前为负数**（前 104 年 ＝ `-104`） |
-| `主要编者` | 主持编制者 |
-| `岁实_回归年_日` | 该历采用的回归年长度（日） |
-| `朔望月_日` | 该历采用的朔望月长度（日） |
-| `岁首_斗建` | 岁首所在之月（建子／建丑／建寅／建亥） |
-| `重大改动` | 该历的关键贡献；★ 标出五次大改革 |
-| `依据` | 该行数据的来源 |
+| `序号` | 1—52, in order of the years of use |
+| `历法名` | Name of the calendar |
+| `朝代_政权` | Dynasty or regime that promulgated or used it |
+| `行用起年` / `行用止年` | As written in the sources; BCE written "前104" |
+| `行用起年_数值` / `行用止年_数值` | Plain integer years, **negative for BCE** (104 BCE = `-104`) |
+| `主要编者` | Principal compiler |
+| `岁实_回归年_日` | Length of the tropical year adopted by that calendar, in days |
+| `朔望月_日` | Length of the synodic month adopted by that calendar, in days |
+| `岁首_斗建` | The month in which the year began (jian-zi / jian-chou / jian-yin / jian-hai) |
+| `重大改动` | The calendar's key contribution; ★ marks the five great reforms |
+| `依据` | Source for that row |
 
-## 五次大改革
+## The five great reforms
 
-| 次 | 历法 | 时间 | 改了什么 |
+| No. | Calendar | Date | What changed |
 |:--:|:---|:---|:---|
-| 一 | 太初历（邓平、落下闳） | 前 104 年 | 以正月为岁首；首次把二十四节气编入历法；定「无中气之月为闰月」 |
-| 二 | 大明历（祖冲之） | 463 年 | 首次在历法中引入**岁差** |
-| 三 | 戊寅元历（傅仁均） | 619 年 | **始用定朔**（此前用平朔） |
-| 四 | 授时历（郭守敬、王恂） | 1281 年 | 废上元积年；三次差内插法；弧矢割圆术 |
-| 五 | 崇祯历书 → 时宪历 | 1645 年 | **正式采用定气注历**（平气改定气） |
+| 1 | Taichu calendar (Deng Ping, Luoxia Hong) | 104 BCE | Made the first month the year-beginning; the first to write the twenty-four solar terms into a calendar; established "a month without a mid-term is the intercalary month" |
+| 2 | Daming calendar (Zu Chongzhi) | 463 CE | The first to introduce **precession** into a calendar |
+| 3 | Wuyin yuan calendar (Fu Renjun) | 619 CE | **First use of the true new moon** (mean new moon used before) |
+| 4 | Shoushi calendar (Guo Shoujing, Wang Xun) | 1281 CE | Abolished the grand-epoch accumulated years; third-order interpolation; the arc-sagitta method of circle division |
+| 5 | Chongzhen lishu → Shixian calendar | 1645 CE | **Formal adoption of the true solar term in the calendar** (mean solar terms changed to true) |
 
-> 「五次大改革」的编号各版本略有出入（有的把《崇祯历书》算第五次，有的只算三次）。采用「五次」说时宜注明出处。
+> The numbering of the "five great reforms" differs slightly between versions (some count the *Chongzhen lishu* as the fifth, others count only three). When using the "five" reading, cite the source.
 
-## 岁首（斗建）怎么看
+## How to read the year-beginning (month branch)
 
-《史记·历书》：「夏正以正月，殷正以十二月，周正以十一月。」
+*Shiji · Lishu*: "The Xia corrected by the first month, the Yin corrected by the twelfth month, the Zhou corrected by the eleventh month."
 
-| 朝代 | 建 | 岁首相当于今农历 |
+| Dynasty | Branch | Year-beginning corresponds in today's calendar to |
 |:---|:---|:---|
-| 夏 | 建寅 | 正月 |
-| 商（殷） | 建丑 | 十二月 |
-| 周 | 建子 | 十一月 |
-| 秦 | 建亥 | 十月 |
+| Xia | jian-yin | the first month |
+| Shang (Yin) | jian-chou | the twelfth month |
+| Zhou | jian-zi | the eleventh month |
+| Qin | jian-hai | the tenth month |
 
-**太初历（前 104）以后，一律建寅。**
+**From the Taichu calendar (104 BCE) onwards, jian-yin throughout.**
 
-## 两处重要提醒
+## Two important caveats
 
-1. **岁实列只收录有权威来源者（11 / 52 行）**，其余留空。**留空不等于 0，也不等于该历没有岁实值**——它表示该数值在本次编纂所依据的公开材料中未查到可靠来源。**不以推测填补。**
-2. **行用年是编纂值，不是原始文献的直抄**。两处公开年表源（维基「中国历法」年表与百度百科《历法》列表）在若干条目上不一致，已全部列入 `data/kaoyi_discrepancies.csv`，**并列两说而不给结论**。**引用具体年份前请先查考异表。**
+1. **The length-of-year column records only those values with an authoritative source (11 of 52 rows)**, the rest being left empty. **A blank is not zero, nor does it mean the calendar had no such value** — it means the value could not be traced to a reliable source among the public materials on which this compilation rests. **It is not filled in by conjecture.**
+2. **The years of use are compiled values, not direct transcriptions of primary documents.** Two public chronologies (the Wikipedia chronology of Chinese calendars and the Baidu Baike list of calendars) disagree on several entries; all such points are listed in `data/kaoyi_discrepancies.csv`, **which sets the two readings side by side and gives no verdict**. **Consult the variant table before citing any particular year.**
 
-## 数据来源
+## Data sources
 
-| 类别 | 来源 |
+| Category | Source |
 |:---|:---|
-| 行用年、编者 | 维基百科「中国历法」年表；百度百科《历法》「中国古代历法列表」 |
-| 岁实（回归年） | 科普中国《致敬冬至》所载「我国古代有代表性的历法所采用的岁实数据表」 |
-| 三正与岁首 | 《史记·历书》；胡三省注《资治通鉴》 |
-| 大明历岁实与置闰 | 人民网《古代的历法与皇历》 |
-| 统天历、皇极历细节 | 百度百科《统天历》等条目 |
-| 五次大改革 | 上述各源综合 |
+| Years of use, compilers | Wikipedia, "Chinese calendars" chronology; Baidu Baike, "Calendars", list of ancient Chinese calendars |
+| Length of the tropical year | The table of "length-of-year values adopted by representative ancient Chinese calendars" in the Science Popularization China article *Homage to the Winter Solstice* |
+| The three corrects and the year-beginning | *Shiji · Lishu*; Hu Sanxing's commentary on the *Zizhi Tongjian* |
+| Daming calendar year length and intercalation | People's Daily Online, *Calendars and imperial almanacs in antiquity* |
+| Details of the Tongtian and Huangji calendars | Baidu Baike entries such as *Tongtian calendar* |
+| The five great reforms | Synthesised from the sources above |
 
-## 权利
+## Rights
 
-CC BY 4.0。历法数据依《中华人民共和国著作权法》第五条不受该法保护。
+CC BY 4.0. Under Article 5 of the *Copyright Law of the People's Republic of China*, calendrical data are not protected by that law.
+
+---
+
+*This is the English edition of the sub-dataset README. The two editions carry the same tables, row for row. Where they differ, the Chinese edition [`README.zh.md`](README.zh.md) governs.*
