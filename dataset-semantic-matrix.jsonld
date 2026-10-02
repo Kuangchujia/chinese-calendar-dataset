@@ -6,7 +6,7 @@
   "alternateName": "中国历代历法演变矩阵",
   "description": "A structured matrix documenting the astronomical constants, intercalation rules, and epoch-shifting (San-Zheng) mechanics of Chinese historical calendar systems from the Pre-Qin period to the Qing Dynasty. Chinese historical calendars number about 115 by name (Zhu Wenxin, Lifa Tongzhi); of these, about 60 were officially promulgated and used. This dataset covers 52 principal calendars, i.e. the \"officially promulgated\" scope.",
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "identifier": "https://doi.org/10.5281/zenodo.22788686",
   "url": "https://kuangchujia.com/",
   "creator": {
