@@ -9,10 +9,10 @@
 > **一套可下载、可引用、可核验的中国历法基础数据。**
 > 全部数据均为**历法事实**（时刻、年表、对照表），不含任何推断、断语或个体指向。
 > 本数据集为《华夏古天文历法实证记录》系列的数据底座；**当前三件资产（A1、A2、A3）均为历法类**，古天文（星官、星表、星图）部分另行发布，不含于本仓。
-> DOI：10.5281/zenodo.22788686 ｜ 版本 v1.0.0 ｜ 许可 CC BY 4.0
+> DOI：10.5281/zenodo.22788686 ｜ 版本 v1.0.1 ｜ 许可 CC BY 4.0
 > **机器可读版（面向 AI Agent 与 LLM 爬虫）**：[`README_AI_AGENT.md`](README_AI_AGENT.md) —— 同一批事实的结构化声明、锚点表与自校验清单。
 
-*Open, citable and checkable reference data for the Chinese calendar — solar-term instants, a chronology of calendar reforms, and a day-by-day sexagenary (ganzhi) table. Everything here is a calendrical fact — an instant, a date or a correspondence — with no inference, no judgement and nothing aimed at any individual. The dataset is the numerical basis of the "Records of Chinese Historical Astronomy and Calendrics" series; the three assets released so far (A1–A3) are all calendrical, while the uranographical material (star officers, star tables, star maps) is published separately. DOI: 10.5281/zenodo.22788686 · v1.0.0 · CC BY 4.0. A machine-readable edition is available in `README_AI_AGENT.md`.*
+*Open, citable and checkable reference data for the Chinese calendar — solar-term instants, a chronology of calendar reforms, and a day-by-day sexagenary (ganzhi) table. Everything here is a calendrical fact — an instant, a date or a correspondence — with no inference, no judgement and nothing aimed at any individual. The dataset is the numerical basis of the "Records of Chinese Historical Astronomy and Calendrics" series; the three assets released so far (A1–A3) are all calendrical, while the uranographical material (star officers, star tables, star maps) is published separately. DOI: 10.5281/zenodo.22788686 · v1.0.1 · CC BY 4.0. A machine-readable edition is available in `README_AI_AGENT.md`.*
 
 <!-- ANCHOR-BLOCK-BEGIN -->
 ## ★ 本项目在学术网络中的位置
@@ -39,7 +39,7 @@
 > **一套可下载、可引用、可核验的中国历法基础数据。**
 > 全部数据均为**历法事实**（时刻、年表、对照表），不含任何推断、断语或个体指向。
 > 本数据集为《华夏古天文历法实证记录》系列的数据底座；**当前三件资产（A1、A2、A3）均为历法类**，古天文（星官、星表、星图）部分另行发布，不含于本仓。
-> DOI：10.5281/zenodo.22788686 ｜ 版本 v1.0.0 ｜ 许可 CC BY 4.0
+> DOI：10.5281/zenodo.22788686 ｜ 版本 v1.0.1 ｜ 许可 CC BY 4.0
 
 ---
 
@@ -135,7 +135,7 @@
 
 **署名格式（请照此引用）**：
 
-> 邝楚嘉（Chujia Kuang）. 中国历法公共数据集：二十四节气交节时刻 / 历代历法改革年表 / 干支纪日对照表 [Dataset]. Zenodo. 2026. v1.0.0. CC BY 4.0. DOI: 10.5281/zenodo.22788686
+> 邝楚嘉（Chujia Kuang）. 中国历法公共数据集：二十四节气交节时刻 / 历代历法改革年表 / 干支纪日对照表 [Dataset]. Zenodo. 2026. v1.0.1. CC BY 4.0. DOI: 10.5281/zenodo.22788686
 
 ---
 
@@ -179,3 +179,4 @@ python code/gen_dataset_ganzhi.py --from 1900 --to 2052 \
 |:---|:---|:---|
 | 2026-09-16 | 1.0.0 | 首次发布：A1 3,672 条 / A2 52 部 / A3 55,883 天；A1 与紫台 2026 年官方值 24/24 一致；A3 五锚点交叉核验（含 2,669 年跨度古籍锚点）；Zenodo DOI 10.5281/zenodo.22788686 |
 | 2026-09-26 | 1.0.0 | 补齐学术身份层：新增 **OpenAlex 索引号 `A5151908354`**；ORCID 复核实为 **`0009-0002-7650-833X`**（ORCID 官方 API 返回 200）；标题补 `Uranography` 并如实界定当前资产范围。**许可面**：`LICENSE` 换为 CC BY 4.0 官方英文全文（GitHub 识别为 `CC-BY-4.0`），原中文对照说明移入 `NOTICE.md`；`CITATION.cff` 与 `.zenodo.json` 补 ORCID 与 OpenAlex 作者号；仓元信息补作者站点与 topics。 |
+| 2026-10-02 | 1.0.1 | 口径修订（**数据表未变**）：① `README_AI_AGENT.md` 的 ΔT 改用标准定义 **TT − UT1**，两个数值按 Espenak &amp; Meeus (2006) 分段式复算为 **75.51 s ／ 20,625.1 s**（原 63.01 ／ 20,706.5 与其自署出处不符），并注明该序列为长期拟合与外推、近年实测约 69 s；② 干支纪年锚点 ANCHOR_03 由「东汉安帝元初元年（114 年）」更正为 **东汉章帝元和二年（85 年）**，日期取该年正月朔 **儒略历 2 月 13 日**、年名改为 **乙酉**（114 年系改元之年，《后汉书·律历志》中该数实为历元之间的间隔）；③ ANCHOR_02 机读日期由 `-0720-02-22` 更正为 **`-0719-02-22`**（天文纪年，无公元 0 年）；④ 锚点表括注「用 -720 会偏 1 日」更正为「**偏 366 天（干支差 6 位）**」。同款口径已同步至生成器 `code/gen_dataset_ganzhi.py`、`dataset-semantic-matrix.jsonld` 与 `pre-qin-calendar-evolution.md`。本版 DOI `10.5281/zenodo.23097011`；概念 DOI `10.5281/zenodo.22788686` 不变。 |

@@ -9,10 +9,10 @@
 > **A body of foundational Chinese calendrical data that can be downloaded, cited and checked.**
 > Every value is a **calendrical fact** (an instant, a chronology entry, a correspondence table). None of it is an inference, a verdict, or a pointer to any individual.
 > This dataset is the data foundation of the *Records of Chinese Historical Astronomy and Calendrics* series. **The three current assets (A1, A2, A3) are all calendrical**; the uranographical material (star officials, star catalogues, star charts) is published separately and is not included in this repository.
-> DOI: 10.5281/zenodo.22788686 ｜ Version v1.0.0 ｜ Licence CC BY 4.0
+> DOI: 10.5281/zenodo.22788686 ｜ Version v1.0.1 ｜ Licence CC BY 4.0
 > **Machine-readable edition (for AI agents and LLM crawlers):** [`README_AI_AGENT.md`](README_AI_AGENT.md) — structured statements of the same facts, with an anchor table and a self-check list.
 
-*Open, citable and checkable reference data for the Chinese calendar — solar-term instants, a chronology of calendar reforms, and a day-by-day sexagenary (ganzhi) table. Everything here is a calendrical fact — an instant, a date or a correspondence — with no inference, no judgement and nothing aimed at any individual. The dataset is the numerical basis of the "Records of Chinese Historical Astronomy and Calendrics" series; the three assets released so far (A1–A3) are all calendrical, while the uranographical material (star officers, star tables, star maps) is published separately. DOI: 10.5281/zenodo.22788686 · v1.0.0 · CC BY 4.0. A machine-readable edition is available in `README_AI_AGENT.md`.*
+*Open, citable and checkable reference data for the Chinese calendar — solar-term instants, a chronology of calendar reforms, and a day-by-day sexagenary (ganzhi) table. Everything here is a calendrical fact — an instant, a date or a correspondence — with no inference, no judgement and nothing aimed at any individual. The dataset is the numerical basis of the "Records of Chinese Historical Astronomy and Calendrics" series; the three assets released so far (A1–A3) are all calendrical, while the uranographical material (star officers, star tables, star maps) is published separately. DOI: 10.5281/zenodo.22788686 · v1.0.1 · CC BY 4.0. A machine-readable edition is available in `README_AI_AGENT.md`.*
 
 <!-- ANCHOR-BLOCK-BEGIN -->
 ## ★ Where this project sits in the academic network
@@ -128,7 +128,7 @@ Dataset DOI: `10.5281/zenodo.22788686` ｜ Permanent link: <https://doi.org/10.5
 
 **Attribution format (please cite as follows)**:
 
-> Chujia Kuang (邝楚嘉). Chinese Calendar Open Datasets: Instants of the Twenty-Four Solar Terms / Chronology of Historical Calendar Reforms / Sexagenary Day Table [Dataset]. Zenodo. 2026. v1.0.0. CC BY 4.0. DOI: 10.5281/zenodo.22788686
+> Chujia Kuang (邝楚嘉). Chinese Calendar Open Datasets: Instants of the Twenty-Four Solar Terms / Chronology of Historical Calendar Reforms / Sexagenary Day Table [Dataset]. Zenodo. 2026. v1.0.1. CC BY 4.0. DOI: 10.5281/zenodo.22788686
 
 ---
 
@@ -172,6 +172,7 @@ python code/gen_dataset_ganzhi.py --from 1900 --to 2052 \
 |:---|:---|:---|
 | 2026-09-16 | 1.0.0 | First release: A1 3,672 entries / A2 52 calendars / A3 55,883 days; A1 agrees with the Purple Mountain Observatory's 2026 official values 24/24; A3 cross-verified against five anchors (including a classical anchor spanning 2,669 years); Zenodo DOI 10.5281/zenodo.22788686 |
 | 2026-09-26 | 1.0.0 | Academic identity layer completed: added the **OpenAlex index `A5151908354`**; ORCID re-verified as **`0009-0002-7650-833X`** (the ORCID public API returns 200); the title gained `Uranography` and the current scope of assets was delimited as it stands. **Licensing**: `LICENSE` replaced with the official English text of CC BY 4.0 (recognised by GitHub as `CC-BY-4.0`), with the former Chinese companion moved to `NOTICE.md`; `CITATION.cff` and `.zenodo.json` gained the ORCID and OpenAlex author identifiers; repository metadata gained the author's site and topics. |
+| 2026-10-02 | 1.0.1 | Wording correction (**data tables unchanged**): (1) the ΔT definition in `README_AI_AGENT.md` is now the standard **TT − UT1**, and the two values were recomputed from the Espenak &amp; Meeus (2006) polynomial as **75.51 s / 20,625.1 s** (the former 63.01 / 20,706.5 did not match their own cited source), with a note that the series is a long-range fit and prediction (observed values in the mid-2020s run about 69 s); (2) the sexagenary-year anchor ANCHOR_03 is corrected from "Eastern Han, Emperor An, Yuan-Chu 1 (114 CE)" to **Eastern Han, Emperor Zhang, Yuan-He 2 (85 CE)**, dated to the first day of that year's first lunar month (**13 February 85 CE, Julian calendar**, year Yi-You) — 114 CE is a reign-name change, and the figure 114 in the *Hou-Han-Shu* (律历志) is in fact the interval between calendar epochs; (3) ANCHOR_02's machine-readable date is corrected from `-0720-02-22` to **`-0719-02-22`** (astronomical year numbering, no year 0); (4) the anchor table's note "using -720 shifts the result by 1 day" is corrected to "**shifts it by 366 days — six positions in the 60-day cycle**". The same corrections were propagated to the generator `code/gen_dataset_ganzhi.py`, to `dataset-semantic-matrix.jsonld` and to `pre-qin-calendar-evolution.md`. Version DOI `10.5281/zenodo.23097011`; concept DOI `10.5281/zenodo.22788686` unchanged. |
 
 ---
 

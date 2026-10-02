@@ -6,7 +6,7 @@
   "alternateName": "中国历代历法演变矩阵",
   "description": "A structured matrix documenting the astronomical constants, intercalation rules, and epoch-shifting (San-Zheng) mechanics of Chinese historical calendar systems from the Pre-Qin period to the Qing Dynasty. Chinese historical calendars number about 115 by name (Zhu Wenxin, Lifa Tongzhi); of these, about 60 were officially promulgated and used. This dataset covers 52 principal calendars, i.e. the \"officially promulgated\" scope.",
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "identifier": "https://doi.org/10.5281/zenodo.22788686",
   "url": "https://kuangchujia.com/",
   "creator": {
@@ -18,7 +18,7 @@
       "https://openalex.org/A5151908354"
     ]
   },
-  "temporalCoverage": "-0720/1911",
+  "temporalCoverage": "-0719/1911",
   "spatialCoverage": {
     "@type": "Place",
     "name": "China"
@@ -60,9 +60,9 @@
       {
         "@type": "DataFeedItem",
         "name": "Sexagenary Day-Cycle Continuity (干支纪日连续性)",
-        "temporal": "-0720-02-22/2026",
+        "temporal": "-0719-02-22/2026",
         "additionalType": "ChronologicalAnchor",
-        "description": "The sexagenary (ganzhi) day count is a continuous modulo-60 cycle, independent of any calendar reform. The earliest textual evidence for its use is the Chunqiu/Zuozhuan record of the 1st year of Duke Yin of Lu (\"in the fifth month, on the Xin-Chou day\"). The continuity anchor used by this dataset is the Ji-Si day of the 2nd month, 3rd year of Duke Yin of Lu, precalculated in the Julian calendar as 22 February 720 BCE — verified as Ji-Si by independent count.",
+        "description": "The sexagenary (ganzhi) day count is a continuous modulo-60 cycle, independent of any calendar reform. The earliest textual evidence for its use is the Chunqiu/Zuozhuan record of the 1st year of Duke Yin of Lu (\"in the fifth month, on the Xin-Chou day\"). The continuity anchor used by this dataset is the Ji-Si day of the 2nd month, 3rd year of Duke Yin of Lu, precalculated in the Julian calendar as 22 February 720 BCE (astronomical year −719) — verified as Ji-Si by independent count.",
         "properties": {
           "continuityAnchor": "22 February 720 BCE (Lu Yin Gong 3rd Year, 2nd Month, Ji-Si Day / 鲁隐公三年二月己巳日)",
           "orderingAnchor": "1949-10-01 = Jia-Zi (甲子日)",
@@ -73,12 +73,12 @@
       {
         "@type": "DataFeedItem",
         "name": "Official Sexagenary Year-Cycle Institutionalization (干支纪年建制化)",
-        "temporal": "0114",
+        "temporal": "0085",
         "additionalType": "ChronologicalAnchor",
-        "description": "The first institutionalized and officially mandated implementation of the sexagenary cycle for year reckoning without relying on imperial eras.",
+        "description": "The first institutionalized and officially mandated implementation of the sexagenary cycle for year reckoning without relying on imperial eras. Promulgated in 85 CE (Eastern Han, Emperor Zhang, Yuan-He 2nd Year); 85 CE is the sexagenary year Yi-You (乙酉年).",
         "properties": {
-          "startYear": "Eastern Han Dynasty, Emperor An, Yuan-Chu 1st Year (东汉安帝元初元年)",
-          "stemBranchDesignation": "Jia-Yin (甲寅年)",
+          "startYear": "Eastern Han Dynasty, Emperor Zhang, Yuan-He 2nd Year (东汉章帝元和二年)",
+          "stemBranchDesignation": "Yi-You (乙酉年)",
           "continuityStatus": "Uninterrupted to present day"
         }
       },

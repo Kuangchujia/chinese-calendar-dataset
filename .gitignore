@@ -9,3 +9,9 @@ zenodo_state.json
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# 本地备份／临时件（不入库、不进发布 zip）
+_bak_*/
+*.bak*
+*.orig
+*.rej

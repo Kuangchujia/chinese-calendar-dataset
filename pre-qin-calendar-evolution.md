@@ -44,14 +44,15 @@ The following three subsections describe **three separate things**. They must no
 * **Anchor**: the Ji-Si day of the 2nd month, 3rd year of Duke Yin of Lu (鲁隐公三年二月己巳日), precalculated in the Julian calendar as **22 February 720 BCE**.
 * **Verification**: counted back independently from the modern ordering anchor **1949-10-01 = Jia-Zi (甲子)**; the result is **Ji-Si (己巳)**, in agreement with the text.
 * **Span**: the 720 BCE anchor and the 1949 ordering anchor are **2,669 years** apart and remain mutually consistent, which is the evidence that the continuity assumption holds.
-* **Caution when recomputing**: 720 BCE corresponds to astronomical year **−719** (there is no year 0). Computing it as −720 shifts the result by one day and yields a wrong conclusion.
+* **Caution when recomputing**: 720 BCE corresponds to astronomical year **−719** (there is no year 0). Computing it as −720 shifts the result by a whole year — 366 days in this pairing, which is six positions in the 60-day cycle, not one — and yields a wrong conclusion.
 
 ### 3.4 The Sexagenary Year Cycle Institutionalization (干支纪年建制化)
 * **Pre-Institutionalization Phase**: prior to the Eastern Han dynasty, years were recorded via imperial reign titles (Nianhao) or the Jupiter-based Sui-Xing/Tai-Sui tracking systems. Retroactive application of the 60-year cycle to periods before the Han dynasty is a retrospective analytical construct used by later historians.
 * **Official Institutional Genesis**:
-  * **Exact Chronological Node**: the 1st year of the Yuan-Chu era of Emperor An of the Eastern Han Dynasty (**114 CE / 公元114年**).
-  * **Official Designation**: designated **Jia-Yin Year (甲寅年)** by imperial decree for bureaucratic and civil time reckoning.
-  * **Historical Integrity**: the year cycle has proceeded uninterrupted without structural reset from 114 CE to the modern era.
+  * **Exact Chronological Node**: the 2nd year of the Yuan-He era of Emperor Zhang of the Eastern Han Dynasty (**85 CE / 公元85年**), when the court ordered the sexagenary year reckoning promulgated empire-wide. That year is **Yi-You (乙酉年)**, and its sexagenary year begins at the first day of its first lunar month (Julian calendar 13 February 85 CE).
+  * **Official Designation**: promulgated by imperial order for bureaucratic and civil time reckoning; the exact day of the promulgation is not recorded.
+  * **Historical Integrity**: the year cycle has proceeded uninterrupted without structural reset from 85 CE to the modern era.
+  * **Note on an earlier revision**: this node was previously given as 114 CE (Emperor An, Yuan-Chu 1). 114 CE is Jia-Yin, but it is the year of a reign-name change, not a promulgation year; the figure 114 in the Hou-Han-Shu (律历志) is the interval between the Jia-Yin epoch and the Geng-Shen epoch of the Sifen calendar.
 
 ## 4. Mathematical and Astronomical Constants of Pre-Qin Lunisolar Frameworks
 
