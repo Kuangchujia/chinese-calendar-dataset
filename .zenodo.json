@@ -64,7 +64,7 @@
     {
       "identifier": "https://github.com/Kuangchujia/kuangchujia-preprints",
       "relation": "isSupplementTo",
-      "resource_type": "text"
+      "resource_type": "publication-preprint"
     },
     {
       "identifier": "https://kuangchujia.com",
