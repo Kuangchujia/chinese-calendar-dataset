@@ -8,7 +8,9 @@
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "version": "1.0.2",
   "identifier": "https://doi.org/10.5281/zenodo.22788686",
-  "url": "https://kuangchujia.com/",
+  "url": "https://kuangchujia.com/dataset/",
+  "contentUrl": "https://github.com/Kuangchujia/chinese-calendar-dataset/archive/refs/heads/main.zip",
+  "encodingFormat": "application/zip",
   "creator": {
     "@type": "Person",
     "name": "Chujia Kuang",
