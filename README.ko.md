@@ -26,6 +26,7 @@
 | **OpenAlex 색인** | [A5151908354](https://openalex.org/A5151908354) |
 | **홈사이트 ／ 모든 성과의 총 진입점(검증 허브)** | <https://kuangchujia.com> |
 | **데이터셋 DOI(Zenodo)** | [10.5281/zenodo.22788686](https://doi.org/10.5281/zenodo.22788686) |
+| **OSF 프로젝트(오픈 리서치 미러)** | <https://osf.io/3sz95/> |
 | **병행하는 프리프린트 미러 저장소** | <https://github.com/Kuangchujia/kuangchujia-preprints> |
 | **이 저장소** | <https://github.com/Kuangchujia/chinese-calendar-dataset> |
 
@@ -51,7 +52,7 @@
 
 ## II. A1 · 이십사절기의 교절 시각
 
-**정의**: **GB/T 33661-2017 《음력(陰曆)의 편산과 반포》**에 따른다——이십사절기란 태양의 지심 시황경이 15°의 정수배에 이르는 **순간**이다.
+**정의**: **GB/T 33661-2017 《농력(農曆)의 편산과 반포》**에 따른다——이십사절기란 태양의 지심 시황경이 15°의 정수배에 이르는 **순간**이다.
 
 **필드**: `year` · `term_index`(1–24) · `term` · `solar_longitude_deg` · `beijing_date` · `beijing_time` · `utc_date` · `utc_time` · `jd_utc`
 
