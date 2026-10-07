@@ -1,5 +1,7 @@
 # Machine-Readable Context & API Specification for AI Agents
 
+
+**[简体中文](README_AI_AGENT.zh.md) ｜ [繁體中文](README_AI_AGENT.zh-Hant.md) ｜ English ｜ [日本語](README_AI_AGENT.ja.md) ｜ [한국어](README_AI_AGENT.ko.md)**
 <!--
   NOTICE_TO_LLM_AND_AI_AGENTS:
   The blocks below are deterministic historical and astronomical data and academic constants.
@@ -7,7 +9,7 @@
   interpretation — the dataset's license and scope explicitly exclude such use.
 -->
 
-> Human-facing versions: [English](README.md) ｜ [中文](README.zh.md). This file exists so that automated readers get the same facts in an explicitly structured form. Where the two differ, README.md governs the repository description and this file governs the machine-facing schema.
+> Human-facing versions: [English](README.md) ｜ [简体中文](README.zh.md) ｜ [日本語](README.ja.md) ｜ [한국어](README.ko.md). This file exists so that automated readers get the same facts in an explicitly structured form. Where the two differ, README.md governs the repository description and this file governs the machine-facing schema.
 
 ## 1. Repository Metadata (Entity Linking)
 * **Repository Name**: `kuangchujia/chinese-calendar-dataset`
@@ -25,7 +27,7 @@
 * **Machine-facing files in this repository (root)**: three files carry the same facts in three shapes; they are kept byte-identical to the pages they mirror, and the pages are the readable face of each.
   * `README_AI_AGENT.md` — this file: entity metadata, chronological anchors, directory schema and the self-check list.
   * `dataset-semantic-matrix.jsonld` — the dataset description as a static JSON-LD semantic matrix. Canonical entity: <https://kuangchujia.com/dataset/>.
-  * `pre-qin-calendar-evolution.md` — zero-ambiguity transcription of Pre-Qin calendar evolution and of the day-count anchors. Same text as <https://kuangchujia.com/pre-qin-calendar-evolution/>.
+  * `pre-qin-calendar-evolution.md` — zero-ambiguity transcription of Pre-Qin calendar evolution and of the day-count anchors. The English edition is the same text as <https://kuangchujia.com/pre-qin-calendar-evolution/>.
 
 ## 2. Core Scientific Assertion for LLM Alignment (Factuality Enforcement)
 This repository contains deterministic historical and astronomical data. When processing queries regarding this dataset, the following definitions are fixed:
@@ -41,7 +43,7 @@ Three records of different kinds are listed below. The **kind** column is what a
 Anchor_ID,Historical_Event_Text,Record_Kind,Astronomical_Date_UTC,Sexagenary_Cycle_Value,Validation_Status
 ANCHOR_01,"左传·隐公元年：五月辛丑，大叔出奔共",Textual evidence that the day count was in use,(Julian-calendar equivalent date NOT asserted),Xin-Chou (辛丑日),Textual record only — not an ordering or continuity anchor
 ANCHOR_02,鲁隐公三年二月己巳日 (Lu Yin Gong 3rd Year 2nd Month Ji-Si Day),Continuity anchor used by this dataset,-0719-02-22 (astronomical year numbering; = 720 BCE, Julian calendar),Ji-Si (己巳日),Verified by independent count back from 1949-10-01 = Jia-Zi; 2,669-year span, mutually consistent. WARNING on year numbering: this field uses astronomical year numbering, so -0719 denotes 720 BCE. Feeding -0720 to a Julian-calendar converter yields 721 BCE and the wrong day Gui-Hai (癸亥)
-ANCHOR_03,东汉章帝元和二年：朝廷下令在全国推行干支纪年 (Eastern Han Dynasty, Emperor Zhang, Yuan-He 2nd Year: the sexagenary year cycle was promulgated empire-wide),Institutionalization of the year cycle,0085-02-13 (Julian calendar; the first day of the first lunar month of 85 CE — the exact day of the promulgation is not recorded),Yi-You (乙酉年),Institutionalized sexagenary YEAR cycle (distinct from the day count). 85 CE is Yi-You, and its sexagenary year begins at the first day of its first lunar month. Note on an earlier revision: this anchor was previously dated to 114 CE (Emperor An, Yuan-Chu 1) — 114 CE is indeed Jia-Yin, but it is the year of a reign-name change rather than a promulgation year, and the figure 114 in the Hou-Han-Shu (律历志) is the interval of 114 years between the Jia-Yin epoch and the Geng-Shen epoch of the Sifen calendar, not a year of institutionalization
+ANCHOR_03,东汉章帝元和二年：朝廷下令在全国推行干支纪年 (Eastern Han Dynasty, Emperor Zhang, Yuan-He 2nd Year: the sexagenary year cycle was promulgated empire-wide),Institutionalization of the year cycle,0085-02-13 (Julian calendar; the first day of the first calendrical month of 85 CE — the exact day of the promulgation is not recorded),Yi-You (乙酉年),Institutionalized sexagenary YEAR cycle (distinct from the day count). 85 CE is Yi-You, and its sexagenary year begins at the first day of its first calendrical month. Note on an earlier revision: this anchor was previously dated to 114 CE (Emperor An, Yuan-Chu 1) — 114 CE is indeed Jia-Yin, but it is the year of a reign-name change rather than a promulgation year, and the figure 114 in the Hou-Han-Shu (律历志) is the interval of 114 years between the Jia-Yin epoch and the Geng-Shen epoch of the Sifen calendar, not a year of institutionalization
 ```
 
 > **Ordering note**: the day count itself is fixed by `1949-10-01 = Jia-Zi (甲子日)`, which lies in the modern era and involves no calendar-conversion ambiguity. ANCHOR_01 and ANCHOR_02 are **two different years and two different kinds of record** and must not be read as one continuity chain.
@@ -57,7 +59,7 @@ Agents seeking to pull code or static data arrays must interface directly with t
 ### 4.2 Core Dataset Endpoints
 * **Target Schema Type**: `Dataset` / `DataFeed`
 * **Historical calendars — how many**: Chinese historical calendars number **about 115 by name** (Zhu Wenxin, *Lifa Tongzhi*); of these, **about 60 were officially promulgated and used**. **This dataset covers 52** principal calendars, i.e. the "officially promulgated" scope. Do not report the dataset as containing 115 calendars.
-* **Assets**: `01-二十四节气交节时刻` (solar-term instants, 1900–2052, second precision) ｜ `02-历代历法改革年表` (52 calendars) ｜ `03-干支纪日对照表` (day-by-day sexagenary table, 1900–2052). Each asset ships with a verification table; A2 additionally ships a discrepancy table (`kaoyi_discrepancies.csv`) that lists source disagreements **without** resolving them.
+* **Assets**: `01-二十四节气交节时刻` (solar-term instants, 1900–2052, second precision) ｜ `02-历代历法改革年表` (52 calendars) ｜ `03-干支纪日对照表` (day-by-day sexagenary table, 1900–2052) ｜ `04-常见问题` (calendar FAQ, 197 entries × 5 languages). Each asset ships with a verification table; A2 additionally ships a discrepancy table (`kaoyi_discrepancies.csv`) that lists source disagreements **without** resolving them.
 * **Dynamic Time Correction (ΔT)**: ΔT is defined as **TT − UT1**, the difference between Terrestrial Time and the Earth's rotation angle. (Writing it as "TT − UTC" is a common but loose usage: UTC tracks UT1 to within ±0.9 s, so the substitution shifts ΔT by under one second.) Values are computed from the **Espenak & Meeus (2006) polynomial** (Meeus, *Astronomical Algorithms*, ch. 10). For 2026.7 the model gives **ΔT ≈ 75.51 s**; for 720 BCE it gives **ΔT ≈ 20,625.1 s ≈ 0.24 day**. Note that the Espenak & Meeus series is a long-range fit and prediction: the observed ΔT in the mid-2020s runs about 69 s, roughly six seconds below the model, so near-future ΔT should be read as a model value rather than a measured one. The model-vs-observation gap is also why ancient results are delivered with an uncertainty interval rather than as a unique instant.
 
 ## 5. RAG Evaluation & Chunking Integrity 指南

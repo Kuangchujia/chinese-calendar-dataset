@@ -1,6 +1,6 @@
 # A2 · Chronology of Historical Calendar Reforms
 
-**[中文](README.zh.md) ｜ English**
+**[简体中文](README.zh.md) ｜ [繁體中文](README.zh-Hant.md) ｜ English ｜ [日本語](README.ja.md) ｜ [한국어](README.ko.md)**
 
 ## What this is
 
@@ -34,7 +34,7 @@ A chronology of the years in which **52 principal calendars** were in use in Chi
 | No. | Calendar | Date | What changed |
 |:--:|:---|:---|:---|
 | 1 | Taichu calendar (Deng Ping, Luoxia Hong) | 104 BCE | Made the first month the year-beginning; the first to write the twenty-four solar terms into a calendar; established "a month without a mid-term is the intercalary month" |
-| 2 | Daming calendar (Zu Chongzhi) | 463 CE | The first to introduce **precession** into a calendar |
+| 2 | Daming calendar (Zu Chongzhi) | 463 CE | The first to introduce **the precession of the equinoxes** into a calendar |
 | 3 | Wuyin yuan calendar (Fu Renjun) | 619 CE | **First use of the true new moon** (mean new moon used before) |
 | 4 | Shoushi calendar (Guo Shoujing, Wang Xun) | 1281 CE | Abolished the grand-epoch accumulated years; third-order interpolation; the arc-sagitta method of circle division |
 | 5 | Chongzhen lishu → Shixian calendar | 1645 CE | **Formal adoption of the true solar term in the calendar** (mean solar terms changed to true) |
@@ -76,4 +76,4 @@ CC BY 4.0. Under Article 5 of the *Copyright Law of the People's Republic of Chi
 
 ---
 
-*This is the English edition of the sub-dataset README. The two editions carry the same tables, row for row. Where they differ, the Chinese edition [`README.zh.md`](README.zh.md) governs.*
+*This is the English edition of the sub-dataset README. All editions carry the same tables, row for row. Where they differ, the Chinese edition [`README.zh.md`](README.zh.md) governs.*

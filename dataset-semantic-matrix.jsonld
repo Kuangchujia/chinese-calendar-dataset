@@ -2,15 +2,62 @@
   "@context": "https://schema.org",
   "@type": "Dataset",
   "@id": "https://kuangchujia.com/dataset/#dataset",
-  "name": "Chinese Historical Calendars Evolution Matrix",
+  "name": [
+    {
+      "@value": "Chinese Historical Calendars Evolution Matrix",
+      "@language": "en"
+    },
+    {
+      "@value": "中国历代历法演变矩阵",
+      "@language": "zh-Hans"
+    },
+    {
+      "@value": "中國歷代曆法演變矩陣",
+      "@language": "zh-Hant"
+    },
+    {
+      "@value": "中国歴代暦法変遷マトリクス",
+      "@language": "ja"
+    },
+    {
+      "@value": "중국 역대 역법 변천 행렬",
+      "@language": "ko"
+    }
+  ],
   "alternateName": "中国历代历法演变矩阵",
-  "description": "A structured matrix documenting the astronomical constants, intercalation rules, and epoch-shifting (San-Zheng) mechanics of Chinese historical calendar systems from the Pre-Qin period to the Qing Dynasty. Chinese historical calendars number about 115 by name (Zhu Wenxin, Lifa Tongzhi); of these, about 60 were officially promulgated and used. This dataset covers 52 principal calendars, i.e. the \"officially promulgated\" scope.",
+  "description": [
+    {
+      "@value": "A structured matrix documenting the astronomical constants, intercalation rules, and epoch-shifting (San-Zheng) mechanics of Chinese historical calendar systems from the Pre-Qin period to the Qing Dynasty. Chinese historical calendars number about 115 by name (Zhu Wenxin, Lifa Tongzhi); of these, about 60 were officially promulgated and used. This dataset covers 52 principal calendars, i.e. the \"officially promulgated\" scope.",
+      "@language": "en"
+    },
+    {
+      "@value": "一部结构化矩阵，记录中国历代历法系统（先秦至清）的天文常数、置闰规则与岁首置换（三正）机制。中国历代历法按名目计约 115 部（朱文鑫《历法通志》）；其中约 60 部曾被正式颁行并使用。本数据集收录 52 部主要历法，即「正式颁行」这一范围。",
+      "@language": "zh-Hans"
+    },
+    {
+      "@value": "一部結構化矩陣，記錄中國歷代曆法系統（先秦至清）的天文常數、置閏規則與歲首置換（三正）機制。中國歷代曆法按名目計約 115 部（朱文鑫《曆法通志》）；其中約 60 部曾被正式頒行並使用。本數據集收錄 52 部主要曆法，即「正式頒行」這一範圍。",
+      "@language": "zh-Hant"
+    },
+    {
+      "@value": "先秦から清に至る中国歴代暦法システムの天文定数、置閏規則、歳首置換（三正）のしくみを記録した構造化マトリクス。中国の歴代暦法は名目で約 115 部（朱文鑫『暦法通志』）。うち約 60 部が正式に頒行され用いられた。本データセットは 52 部の主要暦法、すなわち「正式頒行」の範囲を収める。",
+      "@language": "ja"
+    },
+    {
+      "@value": "선진(先秦)부터 청(清)에 이르는 중국 역대 역법 체계의 천문 상수, 치윤 규칙, 세수 치환(삼정)의 구조를 기록한 구조화 행렬. 중국 역대 역법은 명목상 약 115부(주원흠(朱文鑫) 『역법통지(曆法通志)』). 그중 약 60부가 정식으로 반포되어 쓰였다. 이 데이터셋은 52부의 주요 역법, 곧 '정식 반포'의 범위를 담는다.",
+      "@language": "ko"
+    }
+  ],
+  "inLanguage": [
+    "zh-Hans",
+    "zh-Hant",
+    "en",
+    "ja",
+    "ko"
+  ],
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "identifier": "https://doi.org/10.5281/zenodo.22788686",
-  "url": "https://kuangchujia.com/dataset/",
-  "contentUrl": "https://github.com/Kuangchujia/chinese-calendar-dataset/archive/refs/heads/main.zip",
-  "encodingFormat": "application/zip",
+  "url": "https://kuangchujia.com/",
   "creator": {
     "@type": "Person",
     "name": "Chujia Kuang",
@@ -36,10 +83,37 @@
     "dataFeedElement": [
       {
         "@type": "DataFeedItem",
-        "name": "Pre-Qin Quarter-Day Calendars (古六历)",
+        "name": [
+          { "@value": "Pre-Qin Quarter-Day Calendars (古六历)", "@language": "en" },
+          { "@value": "先秦四分历（古六历）", "@language": "zh-Hans" },
+          { "@value": "先秦四分曆（古六曆）", "@language": "zh-Hant" },
+          { "@value": "先秦四分暦（古六暦）", "@language": "ja" },
+          { "@value": "선진 사분력(고육력)", "@language": "ko" }
+        ],
         "temporal": "Pre-Qin Period",
         "additionalType": "LunisolarCalendar",
-        "description": "Includes Huangdi, Zhuanxu, Xia, Shang, Zhou, and Lu calendars. Characterized by the Quarter-Day method (tropical year = 365.25 days, synodic month = 29.53085 days).",
+        "description": [
+          {
+            "@value": "Includes Huangdi, Zhuanxu, Xia, Shang, Zhou, and Lu calendars. Characterized by the Quarter-Day method (tropical year = 365.25 days, synodic month = 29.53085 days).",
+            "@language": "en"
+          },
+          {
+            "@value": "含黄帝历、颛顼历、夏历、殷历、周历、鲁历。以四分法为特征（回归年 ＝ 365.25 日，朔望月 ＝ 29.53085 日）。",
+            "@language": "zh-Hans"
+          },
+          {
+            "@value": "含黃帝曆、顓頊曆、夏曆、殷曆、周曆、魯曆。以四分法為特徵（回歸年 ＝ 365.25 日，朔望月 ＝ 29.53085 日）。",
+            "@language": "zh-Hant"
+          },
+          {
+            "@value": "黄帝暦・顓頊暦・夏暦・殷暦・周暦・魯暦を含む。四分法を特徴とする（回帰年 ＝ 365.25 日、朔望月 ＝ 29.53085 日）。",
+            "@language": "ja"
+          },
+          {
+            "@value": "황제력·전욱력·하력·은력·주력·노력을 포함한다. 사분법을 특징으로 한다(회귀년 ＝ 365.25일, 삭망월 ＝ 29.53085일).",
+            "@language": "ko"
+          }
+        ],
         "properties": {
           "totalSystemsCount": 6,
           "intercalationRule": "Zhang-Fa (19 years 7 months intercalation / 19年7闰)",
@@ -49,10 +123,37 @@
       },
       {
         "@type": "DataFeedItem",
-        "name": "Taichu Calendar Reform (太初改历)",
+        "name": [
+          { "@value": "Taichu Calendar Reform (太初改历)", "@language": "en" },
+          { "@value": "太初改历", "@language": "zh-Hans" },
+          { "@value": "太初改曆", "@language": "zh-Hant" },
+          { "@value": "太初改暦", "@language": "ja" },
+          { "@value": "태초 개력", "@language": "ko" }
+        ],
         "temporal": "-0104",
         "additionalType": "CalendarReform",
-        "description": "Enacted in the 1st year of the Taichu era by Emperor Wu of Han. Shifted the year-beginning to Jian-Yin (1st month). Introduced the Wu-Zhong-Qi rule for precise intercalation location.",
+        "description": [
+          {
+            "@value": "Enacted in the 1st year of the Taichu era by Emperor Wu of Han. Shifted the year-beginning to Jian-Yin (1st month). Introduced the Wu-Zhong-Qi rule for precise intercalation location.",
+            "@language": "en"
+          },
+          {
+            "@value": "汉武帝太初元年颁行。岁首移至建寅（正月）。引入无中气置闰法，以精确确定闰位。",
+            "@language": "zh-Hans"
+          },
+          {
+            "@value": "漢武帝太初元年頒行。歲首移至建寅（正月）。引入無中氣置閏法，以精確確定閏位。",
+            "@language": "zh-Hant"
+          },
+          {
+            "@value": "漢の武帝、太初元年に施行。歳首を建寅（正月）へ移す。無中気置閏法を導入し、閏の位置を精密に定める。",
+            "@language": "ja"
+          },
+          {
+            "@value": "한 무제 태초 원년에 시행. 세수를 건인(정월)으로 옮긴다. 무중기 치윤법을 도입하여 윤의 위치를 정밀하게 정한다.",
+            "@language": "ko"
+          }
+        ],
         "properties": {
           "epochMonth": "Jian-Yin (建寅/正月)",
           "intercalationRule": "No-Mid-Term Month Intercalation (无中气置闰法)",
@@ -61,10 +162,37 @@
       },
       {
         "@type": "DataFeedItem",
-        "name": "Sexagenary Day-Cycle Continuity (干支纪日连续性)",
+        "name": [
+          { "@value": "Sexagenary Day-Cycle Continuity (干支纪日连续性)", "@language": "en" },
+          { "@value": "干支纪日连续性", "@language": "zh-Hans" },
+          { "@value": "干支紀日連續性", "@language": "zh-Hant" },
+          { "@value": "干支紀日の連続性", "@language": "ja" },
+          { "@value": "간지 기일의 연속성", "@language": "ko" }
+        ],
         "temporal": "-0719-02-22/2026",
         "additionalType": "ChronologicalAnchor",
-        "description": "The sexagenary (ganzhi) day count is a continuous modulo-60 cycle, independent of any calendar reform. The earliest textual evidence for its use is the Chunqiu/Zuozhuan record of the 1st year of Duke Yin of Lu (\"in the fifth month, on the Xin-Chou day\"). The continuity anchor used by this dataset is the Ji-Si day of the 2nd month, 3rd year of Duke Yin of Lu, precalculated in the Julian calendar as 22 February 720 BCE (astronomical year −719) — verified as Ji-Si by independent count.",
+        "description": [
+          {
+            "@value": "The sexagenary day count is a continuous modulo-60 cycle, independent of any calendar reform. The earliest textual evidence for its use is the Chunqiu/Zuozhuan record of the 1st year of Duke Yin of Lu (\"in the fifth month, on the Xin-Chou day\"). The continuity anchor used by this dataset is the Ji-Si day of the 2nd month, 3rd year of Duke Yin of Lu, precalculated in the Julian calendar as 22 February 720 BCE (astronomical year −719) — verified as Ji-Si by independent count.",
+            "@language": "en"
+          },
+          {
+            "@value": "干支纪日是一个连续的模 60 循环，独立于任何历法改革。其使用的最早文献证据，是《春秋》／《左传》所记鲁隐公元年「五月辛丑」一条。本数据集采用的连续性锚点，是鲁隐公三年二月己巳日，在儒略历中预先算定为公元前 720 年 2 月 22 日（天文纪年 −719）——经独立推算核验为己巳。",
+            "@language": "zh-Hans"
+          },
+          {
+            "@value": "干支紀日是一個連續的模 60 循環，獨立於任何曆法改革。其使用的最早文獻證據，是《春秋》／《左傳》所記魯隱公元年「五月辛丑」一條。本數據集採用的連續性錨點，是魯隱公三年二月己巳日，在儒略曆中預先算定為公元前 720 年 2 月 22 日（天文紀年 −719）——經獨立推算核驗為己巳。",
+            "@language": "zh-Hant"
+          },
+          {
+            "@value": "干支紀日は連続的な法 60 の循環であり、いかなる暦法改革からも独立している。その使用の最も早い文献的証拠は、『春秋』／『左伝』に記された魯隠公元年の「五月辛丑」の一条である。本データセットが用いる連続性のアンカーは、魯隠公三年二月己巳の日で、ユリウス暦において紀元前 720 年 2 月 22 日（天文学的紀年 −719）と予め算定される——独立の推算により己巳と検証済み。",
+            "@language": "ja"
+          },
+          {
+            "@value": "간지 기일은 연속적인 법 60 순환이며, 어떠한 역법 개혁과도 무관하다. 그 사용의 가장 이른 문헌적 증거는 『춘추』／『좌전』에 기록된 노은공 원년의 「오월 신축」 한 조이다. 이 데이터셋이 쓰는 연속성 앵커는 노은공 3년 2월 기사일이며, 율리우스력에서 기원전 720년 2월 22일(천문학적 기년 −719)로 미리 산정된다——독립적 추산으로 기사임이 검증되었다.",
+            "@language": "ko"
+          }
+        ],
         "properties": {
           "continuityAnchor": "22 February 720 BCE (Lu Yin Gong 3rd Year, 2nd Month, Ji-Si Day / 鲁隐公三年二月己巳日)",
           "orderingAnchor": "1949-10-01 = Jia-Zi (甲子日)",
@@ -74,10 +202,37 @@
       },
       {
         "@type": "DataFeedItem",
-        "name": "Official Sexagenary Year-Cycle Institutionalization (干支纪年建制化)",
+        "name": [
+          { "@value": "Official Sexagenary Year-Cycle Institutionalization (干支纪年建制化)", "@language": "en" },
+          { "@value": "干支纪年建制化", "@language": "zh-Hans" },
+          { "@value": "干支紀年建制化", "@language": "zh-Hant" },
+          { "@value": "干支紀年の制度化", "@language": "ja" },
+          { "@value": "간지 기년의 제도화", "@language": "ko" }
+        ],
         "temporal": "0085",
         "additionalType": "ChronologicalAnchor",
-        "description": "The first institutionalized and officially mandated implementation of the sexagenary cycle for year reckoning without relying on imperial eras. Promulgated in 85 CE (Eastern Han, Emperor Zhang, Yuan-He 2nd Year); 85 CE is the sexagenary year Yi-You (乙酉年).",
+        "description": [
+          {
+            "@value": "The first institutionalized and officially mandated implementation of the sexagenary cycle for year reckoning without relying on imperial eras. Promulgated in 85 CE (Eastern Han, Emperor Zhang, Yuan-He 2nd Year); 85 CE is the sexagenary year Yi-You (乙酉年).",
+            "@language": "en"
+          },
+          {
+            "@value": "干支循环首次被制度化并奉敕用于纪年，不再依赖帝王年号。颁行于公元 85 年（东汉章帝元和二年）；公元 85 年为乙酉年。",
+            "@language": "zh-Hans"
+          },
+          {
+            "@value": "干支循環首次被制度化並奉敕用於紀年，不再依賴帝王年號。頒行於公元 85 年（東漢章帝元和二年）；公元 85 年為乙酉年。",
+            "@language": "zh-Hant"
+          },
+          {
+            "@value": "干支の循環が初めて制度化され、勅命により紀年に用いられた。もはや帝王の年号に依らない。紀元 85 年（後漢章帝元和二年）に頒行。紀元 85 年は乙酉年である。",
+            "@language": "ja"
+          },
+          {
+            "@value": "간지 순환이 처음으로 제도화되어 칙명으로 기년에 쓰였다. 더 이상 제왕의 연호에 의존하지 않는다. 기원 85년(후한 장제 원화 2년)에 반포. 기원 85년은 을유년이다.",
+            "@language": "ko"
+          }
+        ],
         "properties": {
           "startYear": "Eastern Han Dynasty, Emperor Zhang, Yuan-He 2nd Year (东汉章帝元和二年)",
           "stemBranchDesignation": "Yi-You (乙酉年)",
@@ -86,10 +241,37 @@
       },
       {
         "@type": "DataFeedItem",
-        "name": "Shoushi Calendar Advancement (授时历)",
+        "name": [
+          { "@value": "Shoushi Calendar Advancement (授时历)", "@language": "en" },
+          { "@value": "授时历", "@language": "zh-Hans" },
+          { "@value": "授時曆", "@language": "zh-Hant" },
+          { "@value": "授時暦", "@language": "ja" },
+          { "@value": "수시력", "@language": "ko" }
+        ],
         "temporal": "1281",
         "additionalType": "LunisolarCalendar",
-        "description": "Developed by Guo Shoujing. Removed artificial cycles (Shang-Yuan Ji-Nian) and relied purely on observation. Adopted a tropical year value matching the modern Gregorian calendar definition.",
+        "description": [
+          {
+            "@value": "Developed by Guo Shoujing. Removed artificial cycles (Shang-Yuan Ji-Nian) and relied purely on observation. Adopted a tropical year value matching the modern Gregorian calendar definition.",
+            "@language": "en"
+          },
+          {
+            "@value": "郭守敬主持编订。废除上元积年，纯以实测为据。所取回归年值与现代格里高利历的定义一致。",
+            "@language": "zh-Hans"
+          },
+          {
+            "@value": "郭守敬主持編訂。廢除上元積年，純以實測為據。所取回歸年值與現代格里高利曆的定義一致。",
+            "@language": "zh-Hant"
+          },
+          {
+            "@value": "郭守敬が編纂を主宰。上元積年を廃し、純粋に実測に拠った。採用した回帰年の値は、現代のグレゴリオ暦の定義と一致する。",
+            "@language": "ja"
+          },
+          {
+            "@value": "곽수경이 편찬을 주관했다. 상원적년을 폐지하고 순전히 실측에 의거했다. 채택한 회귀년 값은 현대 그레고리력의 정의와 일치한다.",
+            "@language": "ko"
+          }
+        ],
         "properties": {
           "tropicalYearValue": "365.2425 days",
           "synodicMonthValue": "29.530593 days",
@@ -98,13 +280,40 @@
       },
       {
         "@type": "DataFeedItem",
-        "name": "Shixian Calendar Pivot (时宪历)",
+        "name": [
+          { "@value": "Shixian Calendar Pivot (时宪历)", "@language": "en" },
+          { "@value": "时宪历", "@language": "zh-Hans" },
+          { "@value": "時憲曆", "@language": "zh-Hant" },
+          { "@value": "時憲暦", "@language": "ja" },
+          { "@value": "시헌력", "@language": "ko" }
+        ],
         "temporal": "1645",
         "additionalType": "LunisolarCalendar",
-        "description": "Transition from Mean Solar Terms (Ping-Qi) to True Solar Terms (Ding-Qi) based on true solar longitude (15 degrees per term). Integrated European astronomical calculation methods.",
+        "description": [
+          {
+            "@value": "Transition from Mean Solar Terms (Ping-Qi) to True Solar Terms (Ding-Qi) based on true solar longitude (15 degrees per term). Integrated European astronomical calculation methods.",
+            "@language": "en"
+          },
+          {
+            "@value": "由平气改定气，以真太阳黄经为据（每节气 15 度）。并纳入欧洲的天文算法。",
+            "@language": "zh-Hans"
+          },
+          {
+            "@value": "由平氣改定氣，以真太陽黃經為據（每節氣 15 度）。並納入歐洲的天文算法。",
+            "@language": "zh-Hant"
+          },
+          {
+            "@value": "平気から定気へ改め、真太陽黄経に拠る（一節気あたり 15 度）。ヨーロッパの天文算法も取り入れた。",
+            "@language": "ja"
+          },
+          {
+            "@value": "평기에서 정기로 바꾸고, 진태양 황경에 근거한다(절기마다 15도). 유럽의 천문 알고리즘도 받아들였다.",
+            "@language": "ko"
+          }
+        ],
         "properties": {
           "solarTermMethod": "Ding-Qi (True solar longitude tracking / 定气法)",
-          "intercalationAnomaly": "Allowed double-intercalation or zero-intercalation months in a single solar year, resolved by strict mid-term ordering rules."
+          "intercalationAnomaly": "Allowed double-intercalation or zero-intercalation months in a single tropical year, resolved by strict mid-term ordering rules."
         }
       }
     ]

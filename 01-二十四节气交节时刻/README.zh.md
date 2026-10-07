@@ -1,6 +1,6 @@
 # A1 · 二十四节气交节时刻（1900—2052）
 
-**中文 ｜ [English](README.md)**
+**简体中文 ｜ [繁體中文](README.zh-Hant.md) ｜ [English](README.md) ｜ [日本語](README.ja.md) ｜ [한국어](README.ko.md)**
 
 ## 这是什么
 

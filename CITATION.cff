@@ -9,13 +9,17 @@ abstract: >-
   改革年表 52 部，含行用起止年、编者、岁首与岁实；(A3) 公元 1900—2052 年逐日
   干支纪日对照表 55,883 天，含干支、旬、所在节气与节气月。全部内容均为历法事实，
   不含任何推断或个体指向。
+  五语版说明（简体中文 / 繁體中文 / English / 日本語 / 한국어）：自 2026-10-07 起，
+  本仓 README、NOTICE 与 README_AI_AGENT 三种文档各出五个语言版本，每件题头设语言
+  切换行；README.md 为英文版，README.zh.md 为中文基准版。文件名一律沿用既定命名，
+  不作更动。数据件、DOI 与许可均未变更。
 authors:
   - family-names: "邝"
     given-names: "楚嘉"
     alias: "虚竹"
     orcid: "https://orcid.org/0009-0002-7650-833X"
-version: "1.0.2"
-date-released: "2026-10-02"
+version: "1.1.0"
+date-released: "2026-10-07"
 # doi = 概念 DOI（恒定，始终指向最新版）；本版版本 DOI 列在 identifiers 内，可钉住具体版本。
 doi: "10.5281/zenodo.22788686"
 license: "CC-BY-4.0"
@@ -42,8 +46,17 @@ keywords:
   - 历法
   - 中国历法
   - 农历
+  - 二十四節氣
+  - 交節時刻
+  - 干支紀日
+  - 中國曆法
+  - 二十四節気
+  - 中国暦法
+  - 暦法用語
+  - 이십사절기
+  - 간지 기일
+  - 중국 역법
   - solar terms
   - Chinese calendar
   - sexagenary cycle
-  - ganzhi
   - ephemeris

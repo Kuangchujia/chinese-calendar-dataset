@@ -1,6 +1,6 @@
 # Chinese Calendar & Uranography Open Datasets
 
-**[中文](README.zh.md) ｜ English**
+**[简体中文](README.zh.md) ｜ [繁體中文](README.zh-Hant.md) ｜ English ｜ [日本語](README.ja.md) ｜ [한국어](README.ko.md)**
 
 <!-- badges -->
 
@@ -9,10 +9,10 @@
 > **A body of foundational Chinese calendrical data that can be downloaded, cited and checked.**
 > Every value is a **calendrical fact** (an instant, a chronology entry, a correspondence table). None of it is an inference, a verdict, or a pointer to any individual.
 > This dataset is the data foundation of the *Records of Chinese Historical Astronomy and Calendrics* series. **The three current assets (A1, A2, A3) are all calendrical**; the uranographical material (star officials, star catalogues, star charts) is published separately and is not included in this repository.
-> DOI: 10.5281/zenodo.22788686 ｜ Version v1.0.2 ｜ Licence CC BY 4.0
+> DOI: 10.5281/zenodo.22788686 ｜ Version v1.1.0 ｜ Licence CC BY 4.0
 > **Machine-readable edition (for AI agents and LLM crawlers):** [`README_AI_AGENT.md`](README_AI_AGENT.md) — structured statements of the same facts, with an anchor table and a self-check list.
 
-*Open, citable and checkable reference data for the Chinese calendar — solar-term instants, a chronology of calendar reforms, and a day-by-day sexagenary (ganzhi) table. Everything here is a calendrical fact — an instant, a date or a correspondence — with no inference, no judgement and nothing aimed at any individual. The dataset is the numerical basis of the "Records of Chinese Historical Astronomy and Calendrics" series; the three assets released so far (A1–A3) are all calendrical, while the uranographical material (star officers, star tables, star maps) is published separately. DOI: 10.5281/zenodo.22788686 · v1.0.2 · CC BY 4.0. A machine-readable edition is available in `README_AI_AGENT.md`.*
+*Open, citable and checkable reference data for the Chinese calendar — solar-term instants, a chronology of calendar reforms, and a day-by-day sexagenary table. Everything here is a calendrical fact — an instant, a date or a correspondence — with no inference, no judgement and nothing aimed at any individual. The dataset is the numerical basis of the "Records of Chinese Historical Astronomy and Calendrics" series; the three assets released so far (A1–A3) are all calendrical, while the uranographical material (star officers, star tables, star maps) is published separately. DOI: 10.5281/zenodo.22788686 · v1.1.0 · CC BY 4.0. A machine-readable edition is available in `README_AI_AGENT.md`.*
 
 <!-- ANCHOR-BLOCK-BEGIN -->
 ## ★ Where this project sits in the academic network
@@ -31,7 +31,7 @@
 
 **What this repository is**: the **generating code and reproducible entry point** for the three assets of this dataset (A1 solar-term instants, A2 chronology of calendar reforms, A3 sexagenary day table). The data are computed by the three scripts under `code/`; when citing this dataset, please cite its Zenodo DOI as well.
 
-**Companion preprints**: this dataset supplies the calendrical facts behind a series of eleven popular-science preprints on Chinese calendrics and traditional uranography. The solar-term instants underpin *Lichun is not a whole day — only a single second*; the sexagenary day table underpins *Ganzhi: from one tree to twenty-two characters*. The preprint mirror is at <https://github.com/Kuangchujia/kuangchujia-preprints>, with a formal record for each piece on Zenodo and [preprints.org](https://www.preprints.org).
+**Companion preprints**: this dataset supplies the calendrical facts behind a series of eleven popular-science preprints on Chinese calendrics and traditional uranography. The solar-term instants underpin *Beginning of Spring Is Not a Whole Day — Only a Single Second*; the sexagenary day table underpins *The Sexagenary Cycle: From One Tree to Twenty-Two Characters*. The preprint mirror is at <https://github.com/Kuangchujia/kuangchujia-preprints>, with a formal record for each piece on Zenodo and [preprints.org](https://www.preprints.org).
 <!-- ANCHOR-BLOCK-END -->
 
 ---
@@ -43,6 +43,7 @@
 | **A1** | **Instants of the twenty-four solar terms** | `01-二十四节气交节时刻/data/solar_terms_1900_2052.csv`<br>`.json` | **3,672** | CE **1900—2052**, term by term and year by year, precise to the second |
 | **A2** | **Chronology of historical calendar reforms** | `02-历代历法改革年表/data/calendar_reforms.csv` | **52** calendars | the Six Ancient Calendars → Taichu → … → Shoushi → Shixian → Gregorian |
 | **A3** | **Sexagenary day table** | `03-干支纪日对照表/data/ganzhi_day_1900_2052.csv` | **55,883** days | **1900-01-01 — 2052-12-31**, day by day |
+| **A4** | **Frequently asked questions on the Chinese calendar** | `04-常见问题/data/faq_multi5.json`<br>`.jsonl` | **197** entries | leap months, solar terms, Moon phases and eclipses, the sexagenary cycle, lunar mansions and calendar history — in **five languages** |
 
 Every asset ships with a **verification table** (`verification_*.csv`) that sets the computed values side by side with authoritative published values and documentary records, so that users can re-check them independently.
 
@@ -88,11 +89,11 @@ Every asset ships with a **verification table** (`verification_*.csv`) that sets
 
 ## IV. A3 · Sexagenary day table
 
-**Content**: for every day from 1900 to 2052 — the **day's stem-branch pair · its sexagenary index (1–60) · its ten-day week · the solar term in force · the solar-term month (month branch)** — plus the name and instant of the next solar term.
+**Content**: for every day from 1900 to 2052 — the **day's sexagenary binomial · its sexagenary index (1–60) · its ten-day week · the solar term in force · the solar-term month (month branch)** — plus the name and instant of the next solar term.
 
 **Why sexagenary day-recording can be aligned with the Gregorian calendar**: the sexagenary day count is a **continuous sixty-day cycle** running unbroken since the Shang dynasty, tied to no lunar phase and no solar position. Once **one** anchor day is fixed, therefore, the whole sequence is uniquely determined.
 
-**Ordering anchor**: **1949-10-01 = a Jia-Zi day** (three sources agree: the Baidu Baike entry for "Jia-Zi day", several perpetual-calendar sites, and worked examples in bazi teaching materials). The anchor lies in the modern era and involves no calendar-conversion ambiguity.
+**Ordering anchor**: **1949-10-01 = a Jia-Zi day** (three sources agree: the Baidu Baike entry for "Jia-Zi day", several perpetual-calendar sites, and worked examples in traditional calendrical teaching materials). The anchor lies in the modern era and involves no calendar-conversion ambiguity.
 
 **Cross-verification (`data/verification_anchors.csv`)**:
 
@@ -128,7 +129,7 @@ Dataset DOI: `10.5281/zenodo.22788686` ｜ Permanent link: <https://doi.org/10.5
 
 **Attribution format (please cite as follows)**:
 
-> Chujia Kuang (邝楚嘉). Chinese Calendar Open Datasets: Instants of the Twenty-Four Solar Terms / Chronology of Historical Calendar Reforms / Sexagenary Day Table [Dataset]. Zenodo. 2026. v1.0.2. CC BY 4.0. DOI: 10.5281/zenodo.22788686
+> Chujia Kuang (邝楚嘉). Chinese Calendar Open Datasets: Instants of the Twenty-Four Solar Terms / Chronology of Historical Calendar Reforms / Sexagenary Day Table [Dataset]. Zenodo. 2026. v1.1.0. CC BY 4.0. DOI: 10.5281/zenodo.22788686
 
 ---
 
@@ -137,8 +138,8 @@ Dataset DOI: `10.5281/zenodo.22788686` ｜ Permanent link: <https://doi.org/10.5
 1. **This dataset contains calendrical facts only** — instants, chronology entries, correspondence tables. **It contains no judgement, no verdict, no auspicious-or-inauspicious guidance, no shensha, and no reference to any individual.**
 2. **Authority ranking for A1**: the standard within China is the Purple Mountain Observatory's *Chinese Astronomical Almanac* / *Calendar Data* (under GB/T 33661-2017). This data is an **independent second source**, intended for re-computation and long-span queries; **when citing a particular solar-term instant, cite the official almanac as well.**
 3. **A2 is a compiled table, not a primary document**: the years of use and the compilers are taken from two public encyclopaedic chronologies set against each other; **numeric values such as the length of the year are recorded only where a source is explicit**; the 4 points of disagreement are listed separately as textual variants. **Consult the variant table before citing any particular year.**
-4. **A3's day stem-branch pairs carry no theoretical error** (they are pure counting); their correctness depends entirely on the anchor. The anchor has been cross-verified against 4 modern records plus 1 classical record.
-5. **A3's "solar-term month (month branch)" is divided by the twelve *jie* alone** (Lichun, Jingzhe … Xiaohan). It involves no year stem and no five-tiger-escape or any other derivation.
+4. **A3's day sexagenary binomials carry no theoretical error** (they are pure counting); their correctness depends entirely on the anchor. The anchor has been cross-verified against 4 modern records plus 1 classical record.
+5. **A3's "solar-term month (month branch)" is divided by the twelve *jie* alone** (Beginning of Spring, Awakening of Insects … Slight Cold). It involves no year stem and no five-tiger-escape or any other derivation.
 
 ---
 
@@ -162,7 +163,7 @@ python code/gen_dataset_ganzhi.py --from 1900 --to 2052 \
     --prev "01-二十四节气交节时刻/data/preceding_boundary.csv" --out .
 ```
 
-> **`--prev-out` / `--prev` cannot be omitted**: the first five days of 1900 need the 1899 winter solstice to fix their solar term and month branch, and the main table, starting at 1900, does not contain that row. Omitting it assigns those first five days to that year's Xiaohan by mistake.
+> **`--prev-out` / `--prev` cannot be omitted**: the first five days of 1900 need the 1899 winter solstice to fix their solar term and month branch, and the main table, starting at 1900, does not contain that row. Omitting it assigns those first five days to that year's Slight Cold by mistake.
 
 ---
 
@@ -172,9 +173,11 @@ python code/gen_dataset_ganzhi.py --from 1900 --to 2052 \
 |:---|:---|:---|
 | 2026-09-16 | 1.0.0 | First release: A1 3,672 entries / A2 52 calendars / A3 55,883 days; A1 agrees with the Purple Mountain Observatory's 2026 official values 24/24; A3 cross-verified against five anchors (including a classical anchor spanning 2,669 years); Zenodo DOI 10.5281/zenodo.22788686 |
 | 2026-09-26 | 1.0.0 | Academic identity layer completed: added the **OpenAlex index `A5151908354`**; ORCID re-verified as **`0009-0002-7650-833X`** (the ORCID public API returns 200); the title gained `Uranography` and the current scope of assets was delimited as it stands. **Licensing**: `LICENSE` replaced with the official English text of CC BY 4.0 (recognised by GitHub as `CC-BY-4.0`), with the former Chinese companion moved to `NOTICE.md`; `CITATION.cff` and `.zenodo.json` gained the ORCID and OpenAlex author identifiers; repository metadata gained the author's site and topics. |
-| 2026-10-02 | 1.0.1 | Wording correction (**data tables unchanged**): (1) the ΔT definition in `README_AI_AGENT.md` is now the standard **TT − UT1**, and the two values were recomputed from the Espenak &amp; Meeus (2006) polynomial as **75.51 s / 20,625.1 s** (the former 63.01 / 20,706.5 did not match their own cited source), with a note that the series is a long-range fit and prediction (observed values in the mid-2020s run about 69 s); (2) the sexagenary-year anchor ANCHOR_03 is corrected from "Eastern Han, Emperor An, Yuan-Chu 1 (114 CE)" to **Eastern Han, Emperor Zhang, Yuan-He 2 (85 CE)**, dated to the first day of that year's first lunar month (**13 February 85 CE, Julian calendar**, year Yi-You) — 114 CE is a reign-name change, and the figure 114 in the *Hou-Han-Shu* (律历志) is in fact the interval between calendar epochs; (3) ANCHOR_02's machine-readable date is corrected from `-0720-02-22` to **`-0719-02-22`** (astronomical year numbering, no year 0); (4) the anchor table's note "using -720 shifts the result by 1 day" is corrected to "**shifts it by 366 days — six positions in the 60-day cycle**". The same corrections were propagated to the generator `code/gen_dataset_ganzhi.py`, to `dataset-semantic-matrix.jsonld` and to `pre-qin-calendar-evolution.md`. Version DOI `10.5281/zenodo.23097011`; concept DOI `10.5281/zenodo.22788686` unchanged. |
+| 2026-10-02 | 1.0.1 | Wording correction (**data tables unchanged**): (1) the ΔT definition in `README_AI_AGENT.md` is now the standard **TT − UT1**, and the two values were recomputed from the Espenak & Meeus (2006) polynomial as **75.51 s / 20,625.1 s** (the former 63.01 / 20,706.5 did not match their own cited source), with a note that the series is a long-range fit and prediction (observed values in the mid-2020s run about 69 s); (2) the sexagenary-year anchor ANCHOR_03 is corrected from "Eastern Han, Emperor An, Yuan-Chu 1 (114 CE)" to **Eastern Han, Emperor Zhang, Yuan-He 2 (85 CE)**, dated to the first day of that year's first calendrical month (**13 February 85 CE, Julian calendar**, year Yi-You) — 114 CE is a reign-name change, and the figure 114 in the *Hou-Han-Shu* (律历志) is in fact the interval between calendar epochs; (3) ANCHOR_02's machine-readable date is corrected from `-0720-02-22` to **`-0719-02-22`** (astronomical year numbering, no year 0); (4) the anchor table's note "using -720 shifts the result by 1 day" is corrected to "**shifts it by 366 days — six positions in the sexagenary cycle**". The same corrections were propagated to the generator `code/gen_dataset_ganzhi.py`, to `dataset-semantic-matrix.jsonld` and to `pre-qin-calendar-evolution.md`. Version DOI `10.5281/zenodo.23097011`; concept DOI `10.5281/zenodo.22788686` unchanged. |
 | 2026-10-02 | 1.0.2 | Publication-surface metadata alignment (**data tables unchanged**): (1) `CITATION.cff` now carries this version's DOI as an `identifiers` entry, so a citation can pin the exact version, while its `doi` field keeps the concept DOI (**10.5281/zenodo.22788686**) which always resolves to the latest version; (2) `.zenodo.json` is aligned with the live Zenodo record — the creator name is set to the settled form (**Kuang, Chujia**), the three repository-side related identifiers (author hub `isDocumentedBy`, OpenAlex work `W7213411799` `isIdenticalTo`, preprint mirror `isSupplementTo`) are merged with the seven preprint DOIs (10 in total), the "Companion code and preprint series" paragraph and the sentence on the dataset's documentary scope are added, and Chinese punctuation in the fields sent to Zenodo is written half-width (the platform normalises full-width `,:;()` regardless); (3) a stale note in the generator `code/gen_dataset_ganzhi.py` is corrected — its `solve_offset()` docstring claimed the ancient anchor "differs by 6 days in measurement", which independent recomputation refutes: read in astronomical year **−719** the anchor matches the *Chunqiu* record exactly (Ji-Si), and the "6 positions" discrepancy arises only when the year is mis-read as **−720** (a whole-year offset of 366 days). Version DOI `10.5281/zenodo.23097319`; concept DOI `10.5281/zenodo.22788686` unchanged. |
+
+| 2026-10-07 | 1.1.0 | Five-language edition: the three root documents **README / NOTICE / README_AI_AGENT**, the **three sub-directory READMEs**, **`pre-qin-calendar-evolution.md`** and **`dataset-semantic-matrix.jsonld`** now each ship in **Simplified Chinese / Traditional Chinese / English / Japanese / Korean**, with a language switcher at the head of every document. `README.md` remains the English edition and `README.zh.md` the Chinese governing edition; each document adds `.zh-Hant.md`, `.ja.md` and `.ko.md`. **No data table, DOI or licence changed**; the `properties` values in the JSON-LD are controlled vocabulary and are **kept as they stand**. |
 
 ---
 
-*This is the English edition of the repository README. Where the two editions differ, the Chinese edition [`README.zh.md`](README.zh.md) governs the repository description; both carry the same tables, row for row.*
+*This is the English edition of the repository README. Where the editions differ, the Chinese edition [`README.zh.md`](README.zh.md) governs the repository description; all editions carry the same tables, row for row.*

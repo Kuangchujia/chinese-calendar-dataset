@@ -1,6 +1,6 @@
 {
  "title": "二十四节气交节时刻数据集（1900—2052）",
- "title_en": "Solar Term Instants of the 24 Jieqi (1900-2052), Beijing Time",
+ "title_en": "Solar Term Instants of the 24 Solar Terms (1900-2052), Beijing Time",
  "definition": "GB/T 33661-2017《农历的编算和颁行》——二十四节气为太阳地心视黄经达 15° 整数倍的时刻",
  "time_scale": "beijing_* 为北京时间 UTC+08:00；utc_* 为协调世界时 UTC",
  "ephemeris": "JPL DE421 (NASA/JPL, public domain)",

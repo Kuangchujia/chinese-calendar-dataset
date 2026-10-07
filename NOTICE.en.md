@@ -1,6 +1,6 @@
 # NOTICE · Licence, with notes
 
-**[中文](NOTICE.md) ｜ English**
+**[简体中文](NOTICE.md) ｜ [繁體中文](NOTICE.zh-Hant.md) ｜ English ｜ [日本語](NOTICE.ja.md) ｜ [한국어](NOTICE.ko.md)**
 
 > This file explains, in English, the terms of [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 > **The legally binding licence text is the official English full text in [`LICENSE`](LICENSE) at the repository root.**
@@ -45,7 +45,7 @@ Attribution 4.0 International (CC BY 4.0) licence.
 
   Chujia Kuang (邝楚嘉). Chinese Calendar Open Datasets: Instants of the
   Twenty-Four Solar Terms / Chronology of Historical Calendar Reforms /
-  Sexagenary Day Table [Dataset]. 2026. CC BY 4.0.
+  Sexagenary Day Table [Dataset]. 2026. v1.1.0. CC BY 4.0.
 
 —— On the copyright status of this dataset ——
 
