@@ -26,6 +26,7 @@
 | **OpenAlex Index** | [A5151908354](https://openalex.org/A5151908354) |
 | **Home site / umbrella entry point to all outputs (Verification Hub)** | <https://kuangchujia.com> |
 | **Dataset DOI (Zenodo)** | [10.5281/zenodo.22788686](https://doi.org/10.5281/zenodo.22788686) |
+| **OSF project (open research mirror)** | <https://osf.io/3sz95/> |
 | **Companion preprint mirror repository** | <https://github.com/Kuangchujia/kuangchujia-preprints> |
 | **This repository** | <https://github.com/Kuangchujia/chinese-calendar-dataset> |
 
