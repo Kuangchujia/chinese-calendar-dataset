@@ -26,6 +26,7 @@
 | **OpenAlex 索引** | [A5151908354](https://openalex.org/A5151908354) |
 | **ホームサイト ／ 全成果への総合入口（検証ハブ）** | <https://kuangchujia.com> |
 | **データセット DOI（Zenodo）** | [10.5281/zenodo.22788686](https://doi.org/10.5281/zenodo.22788686) |
+| **OSF プロジェクト（オープン研究ミラー）** | <https://osf.io/3sz95/> |
 | **併走するプレプリント・ミラー倉** | <https://github.com/Kuangchujia/kuangchujia-preprints> |
 | **本リポジトリ** | <https://github.com/Kuangchujia/chinese-calendar-dataset> |
 
