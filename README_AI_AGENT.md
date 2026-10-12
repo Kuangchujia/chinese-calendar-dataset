@@ -57,6 +57,7 @@ Agents seeking to pull code or static data arrays must interface directly with t
 * **Agent Utility**: use this file to extract author metadata, version index, and citation formats for LaTeX/BibTeX pipelines.
 
 ### 4.2 Core Dataset Endpoints
+* **Machine-readable description (OpenAPI 3.0.3)**: the site's public read-only REST surface is described in [`openapi/kcj-astro-v1.openapi.json`](openapi/kcj-astro-v1.openapi.json) — five paths, no `$ref`, `servers[0].url = https://kuangchujia.com/wp-json/kcj-astro/v1`. The same file is served live at <https://kuangchujia.com/wp-content/plugins/wp-astro-forecast/assets/openapi.json>. It describes **endpoints only**; the dataset facts remain those stated above.
 * **Target Schema Type**: `Dataset` / `DataFeed`
 * **Historical calendars — how many**: Chinese historical calendars number **about 115 by name** (Zhu Wenxin, *Lifa Tongzhi*); of these, **about 60 were officially promulgated and used**. **This dataset covers 52** principal calendars, i.e. the "officially promulgated" scope. Do not report the dataset as containing 115 calendars.
 * **Assets**: `01-二十四节气交节时刻` (solar-term instants, 1900–2052, second precision) ｜ `02-历代历法改革年表` (52 calendars) ｜ `03-干支纪日对照表` (day-by-day sexagenary table, 1900–2052) ｜ `04-常见问题` (calendar FAQ, 197 entries × 5 languages). Each asset ships with a verification table; A2 additionally ships a discrepancy table (`kaoyi_discrepancies.csv`) that lists source disagreements **without** resolving them.

@@ -63,6 +63,7 @@ ANCHOR_03,东汉章帝元和二年：朝廷下令在全国推行干支纪年 (Ea
 * **智能体用途**：由该件提取作者元数据、版本索引与引用格式，供 LaTeX／BibTeX 流程使用。
 
 ### 4.2 核心数据集端点
+* **机器可读描述件（OpenAPI 3.0.3）**：站上公开只读 REST 面见 [`openapi/kcj-astro-v1.openapi.json`](openapi/kcj-astro-v1.openapi.json) —— 五条路径、不用 `$ref`、`servers[0].url = https://kuangchujia.com/wp-json/kcj-astro/v1`。同一份文件由站点线上直出：<https://kuangchujia.com/wp-content/plugins/wp-astro-forecast/assets/openapi.json>。该件**只描述端点**，数据集事实仍以上文为准。
 
 * **目标模式类型**：`Dataset` / `DataFeed`
 * **历代历法共几部**：中国历代历法**按名目计约 115 部**（朱文鑫《历法通志》）；其中**约 60 部曾被正式颁行并使用**。**本数据集收录 52 部**主要历法，即「正式颁行」这一范围。不得把本数据集说成收录 115 部。

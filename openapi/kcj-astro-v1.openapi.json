@@ -1,0 +1,359 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Chinese Calendar Open Datasets — 华夏历法开放数据集",
+    "version": "2.3.123",
+    "description": "华夏历法开放数据集（Chinese Calendar Open Datasets）的公开只读端点，面向大模型与自动化客户端。\n\n数据内容：现代天体动力学星历推算的日、月、五星黄道位置，以及二十四节气交节时刻。覆盖范围由 JPL DE421 星历决定（1899-07-28 至 2053-10-08），覆盖外不外推。\n\n口径声明（引用本数据时请一并转述）：\n① 数据是天文计算值，不含占卜、运势、吉凶、宜忌等任何推断性内容，也不提供个体测算。\n② 太阳黄经固定以 15° 为步长划分二十四节气。\n③ 宿度由岁差变换归算到历史观测历元。\n\n许可与署名：CC BY 4.0。引用须显式署名 “Chujia Kuang（邝楚嘉）— kuangchujia.com”，作者 ORCID 0009-0002-7650-833X。\n\n全部端点匿名可读，不需要任何凭据。",
+    "contact": {
+      "name": "Chujia Kuang（邝楚嘉）",
+      "url": "https://kuangchujia.com/"
+    },
+    "license": {
+      "name": "CC BY 4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://kuangchujia.com/wp-json/kcj-astro/v1",
+      "description": "站点公开 REST 命名空间 kcj-astro/v1（匿名可读）"
+    }
+  ],
+  "paths": {
+    "/dataset": {
+      "get": {
+        "operationId": "getDataset",
+        "summary": "取数据集切片：历法与天象的四种视图",
+        "description": "按 kind 返回切片。summary 只报「有什么数据、多少行、时间跨度」，不吐正文；daily 为逐日天象（日月五星黄道位置、晨昏蒙影、月相、宿度）；events 为已发布的历法与天象事件；places 为预置观测地目录。\n\ndaily 的每行含 date／jd／method／data_version 与 data 嵌套体；data 内含 sun（含 sunrise_bj／sunset_bj／day_length_min／三段蒙影）、moon（phase_name／moon_age_days／distance_km 等）、planets（水金火木土各含黄经／黄纬／赤纬／距／相位角／视星等／所入宿／可见性）、xiu（sun_xiu／moon_xiu／planets_xiu）、disclaimer。events 的每行含 event_type／time_bj／jd_core／title／summary／url／ephemeris。places 的每行含 key／name_cn／lat／lon／elev_m／tz／latest。",
+        "parameters": [
+          {
+            "name": "kind",
+            "in": "query",
+            "required": false,
+            "description": "切片选择。默认 summary。",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "summary",
+                "daily",
+                "events",
+                "places"
+              ],
+              "default": "summary"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "description": "返回行数上限。服务端把 1—200 之外的值夹到边界（默认 50，上限 200）。summary 忽略此参数。",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 200,
+              "default": 50
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "切片载荷（信封 ＋ count ＋ rows）。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "数据集信封：任何 kind 都带的元信息，另加该 kind 的内容。",
+                  "properties": {
+                    "site": {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "author": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "orcid": {
+                          "type": "string",
+                          "format": "uri"
+                        }
+                      }
+                    },
+                    "license": {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "dataset_doi": {
+                      "type": "string",
+                      "description": "Zenodo 数据集 DOI（概念 DOI）。"
+                    },
+                    "preprint_doi": {
+                      "type": "string",
+                      "description": "配套预印本 DOI。"
+                    },
+                    "plugin": {
+                      "type": "string",
+                      "description": "生成该响应的插件版本。注意：events 切片由入库时预计算并随库缓存，其版本号可能早于其余切片。"
+                    },
+                    "scope_note": {
+                      "type": "object",
+                      "description": "数据口径三条，引用时请转述。",
+                      "properties": {
+                        "these_are": {
+                          "type": "string"
+                        },
+                        "these_are_not": {
+                          "type": "string"
+                        },
+                        "reference": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "generated_at": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "kind": {
+                      "type": "string",
+                      "enum": [
+                        "summary",
+                        "daily",
+                        "events",
+                        "places"
+                      ]
+                    },
+                    "count": {
+                      "type": "integer",
+                      "description": "rows 的长度（summary 无此键）。"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "description": "该 kind 的数据行；结构随 kind 而变，详见各 kind 的说明。",
+                      "items": {}
+                    },
+                    "tables": {
+                      "type": "object",
+                      "description": "仅 summary：各逻辑表的行数与时间跨度。"
+                    },
+                    "endpoints": {
+                      "type": "object",
+                      "description": "仅 summary：本 API 各切片的绝对地址。"
+                    }
+                  },
+                  "additionalProperties": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/place": {
+      "get": {
+        "operationId": "getPlaceDay",
+        "summary": "取某日某预置观测地的天象一行",
+        "description": "单城精确查询，不扫全表。key 必须取自 /dataset?kind=places 返回的目录；date 必须为合法的 YYYY-MM-DD 且落在已导入区间内。\n\n**row 是 17 元位置数组，不是对象**，位序固定如下（索引从 0 起）：0 key；1 name_cn 中文名；2 lat；3 lon；4 sunrise_bj 日出；5 sunset_bj 日落；6 day_length_min 昼长（分钟）；7—8 twilight_civil_begin／end 民用晨光始／昏影终；9—10 twilight_nautical_begin／end 航海晨光始／昏影终；11—12 twilight_astronomical_begin／end 天文晨光始／昏影终；13 moonrise_bj；14 moonset_bj；15 admin_code 省级行政区代码；16 province 省级行政区名。时刻均为 UTC+8 的 HH:MM 字符串；缺测位为 null。",
+        "parameters": [
+          {
+            "name": "date",
+            "in": "query",
+            "required": true,
+            "description": "YYYY-MM-DD，须为真实日历日。",
+            "schema": {
+              "type": "string",
+              "format": "date",
+              "example": "2026-10-12"
+            }
+          },
+          {
+            "name": "key",
+            "in": "query",
+            "required": true,
+            "description": "预置观测地键，取自 /dataset?kind=places 的 key 字段。",
+            "schema": {
+              "type": "string",
+              "example": "jieyang"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "该日该地的天象一行。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "ok": {
+                      "type": "boolean"
+                    },
+                    "date": {
+                      "type": "string",
+                      "format": "date"
+                    },
+                    "row": {
+                      "type": "array",
+                      "description": "17 元位置数组，位序见操作说明。",
+                      "items": {},
+                      "minItems": 17,
+                      "maxItems": 17
+                    }
+                  },
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "date 格式非法或不是合法日历日（kcj_astro_bad_date）。"
+          },
+          "404": {
+            "description": "key 不在预置观测地清单内（kcj_astro_bad_key），或该日该地无数据（kcj_astro_no_row）。"
+          }
+        }
+      }
+    },
+    "/ns": {
+      "get": {
+        "operationId": "listNsTerms",
+        "summary": "取术语命名空间索引（JSON-LD DefinedTermSet）",
+        "description": "华夏历法术语命名空间（/ns/）的机器可读索引，返回 schema.org 的 DefinedTermSet。hasDefinedTerm 各项含 @id（带稳定片段标识符）、name、alternateName、url。其中前四条各有独立概念页（url 指到 /ns/<slug>/），后四条挂 /ns/ 本体的锚点。",
+        "responses": {
+          "200": {
+            "description": "DefinedTermSet；numberOfItems 为条目数。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string",
+                      "enum": [
+                        "DefinedTermSet"
+                      ]
+                    },
+                    "@id": {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "inLanguage": {
+                      "type": "string"
+                    },
+                    "numberOfItems": {
+                      "type": "integer"
+                    },
+                    "hasDefinedTerm": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "additionalProperties": true
+                      }
+                    }
+                  },
+                  "additionalProperties": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ns/{slug}": {
+      "get": {
+        "operationId": "getNsTerm",
+        "summary": "取单个术语的 JSON-LD 定义",
+        "description": "取一条术语的完整定义（含中文定义文字、出处与对应概念页）。slug 取自 /ns 索引，合法值共 8 条：dingqi-pingqi、ershiba-xiu、ganzhi、ganzhi-jiri、suicha、suishou-sanzheng、yinyang-heli、zhirun。其中 yinyang-heli／ganzhi-jiri／suishou-sanzheng／dingqi-pingqi 四条各有独立概念页；ganzhi／zhirun／ershiba-xiu／suicha 四条挂 /ns/ 本体的锚点。未知 slug 返回 404 与 known 列表。",
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "description": "术语 slug。",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "dingqi-pingqi",
+                "ershiba-xiu",
+                "ganzhi",
+                "ganzhi-jiri",
+                "suicha",
+                "suishou-sanzheng",
+                "yinyang-heli",
+                "zhirun"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "该术语的 JSON-LD 定义。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "未知术语（error = unknown_term，并回 known 列表）。"
+          }
+        }
+      }
+    },
+    "/classic-book/{name}": {
+      "get": {
+        "operationId": "getClassicBookSchema",
+        "summary": "取典籍数据集的 JSON-LD 结构",
+        "description": "取「中国天文历法典籍文献集」的结构化描述（schema.org Dataset）。\nname = dataset：144 种典籍的分组、变量与时空覆盖。\nname = absence：其中 86 种本站尚未取得全文电子本的**结构化缺失声明**—— 明记缺失缘由与核验日期，属「事实缺失声明」而非否定性推断。",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "description": "要取的结构名。",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "dataset",
+                "absence"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "schema.org Dataset（name = absence 时带 hasPart 逐条缺失声明）。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "未知结构名（error = unknown_endpoint，并回 known 列表）。"
+          }
+        }
+      }
+    }
+  }
+}

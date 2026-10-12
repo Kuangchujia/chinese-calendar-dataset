@@ -64,6 +64,7 @@ ANCHOR_03,东汉章帝元和二年：朝廷下令在全国推行干支纪年 (Ea
 * **エージェントの用途**：このファイルから著者メタデータ、版索引、引用形式を取り出し、LaTeX／BibTeX の流れに使う。
 
 ### 4.2 中核データセットの端点
+* **機械可読な記述ファイル（OpenAPI 3.0.3）**：サイトの公開読み取り専用 REST 面は [`openapi/kcj-astro-v1.openapi.json`](openapi/kcj-astro-v1.openapi.json) に記述されている（5 パス、`$ref` 不使用、`servers[0].url = https://kuangchujia.com/wp-json/kcj-astro/v1`）。同一ファイルがサイトから直接配信される：<https://kuangchujia.com/wp-content/plugins/wp-astro-forecast/assets/openapi.json>。このファイルは**端点のみ**を記述し、データセットの事実は上文のとおり。
 
 * **対象スキーマ種別**：`Dataset` / `DataFeed`
 * **歴史暦はいくつあるか**：中国の歴史暦は**名目で約 115 部**（朱文鑫『暦法通志』）。うち**約 60 部が正式に頒行され用いられた**。**本データセットが収めるのは 52 部**の主要暦、すなわち「正式頒行」の範囲である。本データセットが 115 部を収録すると述べてはならない。

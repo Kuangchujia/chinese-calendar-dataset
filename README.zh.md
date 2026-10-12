@@ -11,6 +11,7 @@
 > 本数据集为《华夏古天文历法实证记录》系列的数据底座；**当前三件资产（A1、A2、A3）均为历法类**，古天文（星官、星表、星图）部分另行发布，不含于本仓。
 > DOI：10.5281/zenodo.22788686 ｜ 版本 v1.1.0 ｜ 许可 CC BY 4.0
 > **机器可读版（面向 AI Agent 与 LLM 爬虫）**：[`README_AI_AGENT.md`](README_AI_AGENT.md) —— 同一批事实的结构化声明、锚点表与自校验清单。
+> **公开 REST 面（OpenAPI 3.0.3）**：[`openapi/kcj-astro-v1.openapi.json`](openapi/kcj-astro-v1.openapi.json) —— 站上公开只读端点（`kcj-astro/v1`：数据集、逐地逐日数据、术语定义、典籍表式）的机器可读描述件。线上件同址：<https://kuangchujia.com/wp-content/plugins/wp-astro-forecast/assets/openapi.json>。
 
 *Open, citable and checkable reference data for the Chinese calendar — solar-term instants, a chronology of calendar reforms, and a day-by-day sexagenary table. Everything here is a calendrical fact — an instant, a date or a correspondence — with no inference, no judgement and nothing aimed at any individual. The dataset is the numerical basis of the "Records of Chinese Historical Astronomy and Calendrics" series; the three assets released so far (A1–A3) are all calendrical, while the uranographical material (star officers, star tables, star maps) is published separately. DOI: 10.5281/zenodo.22788686 · v1.1.0 · CC BY 4.0. A machine-readable edition is available in `README_AI_AGENT.md`.*
 

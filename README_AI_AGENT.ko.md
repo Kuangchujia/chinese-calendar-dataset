@@ -64,6 +64,7 @@ ANCHOR_03,东汉章帝元和二年：朝廷下令在全国推行干支纪年 (Ea
 * **에이전트 용도**: 이 파일에서 저자 메타데이터, 버전 색인, 인용 형식을 추출해 LaTeX／BibTeX 흐름에 쓴다.
 
 ### 4.2 핵심 데이터셋 엔드포인트
+* **기계 판독용 기술 파일(OpenAPI 3.0.3)**: 사이트의 공개 읽기 전용 REST 표면은 [`openapi/kcj-astro-v1.openapi.json`](openapi/kcj-astro-v1.openapi.json)에 기술되어 있다(5개 경로, `$ref` 미사용, `servers[0].url = https://kuangchujia.com/wp-json/kcj-astro/v1`). 같은 파일이 사이트에서 직접 제공된다: <https://kuangchujia.com/wp-content/plugins/wp-astro-forecast/assets/openapi.json>. 이 파일은 **엔드포인트만** 기술하며, 데이터셋 사실은 위文中과 같다.
 
 * **대상 스키마 유형**: `Dataset` / `DataFeed`
 * **역대 역법은 몇 부인가**: 중국 역대 역법은 **명목상 약 115부**(朱文鑫 『曆法通志』)이다. 그중 **약 60부가 정식으로 반포되어 쓰였다**. **이 데이터셋이 담는 것은 52부**의 주요 역법, 곧 '정식 반포'의 범위이다. 이 데이터셋이 115부를 담았다고 말해서는 안 된다.
