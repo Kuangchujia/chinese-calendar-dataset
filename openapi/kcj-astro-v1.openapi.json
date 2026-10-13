@@ -2,7 +2,7 @@
   "openapi": "3.0.3",
   "info": {
     "title": "Chinese Calendar Open Datasets — 华夏历法开放数据集",
-    "version": "2.3.123",
+    "version": "2.3.124",
     "description": "华夏历法开放数据集（Chinese Calendar Open Datasets）的公开只读端点，面向大模型与自动化客户端。\n\n数据内容：现代天体动力学星历推算的日、月、五星黄道位置，以及二十四节气交节时刻。覆盖范围由 JPL DE421 星历决定（1899-07-28 至 2053-10-08），覆盖外不外推。\n\n口径声明（引用本数据时请一并转述）：\n① 数据是天文计算值，不含占卜、运势、吉凶、宜忌等任何推断性内容，也不提供个体测算。\n② 太阳黄经固定以 15° 为步长划分二十四节气。\n③ 宿度由岁差变换归算到历史观测历元。\n\n许可与署名：CC BY 4.0。引用须显式署名 “Chujia Kuang（邝楚嘉）— kuangchujia.com”，作者 ORCID 0009-0002-7650-833X。\n\n全部端点匿名可读，不需要任何凭据。",
     "contact": {
       "name": "Chujia Kuang（邝楚嘉）",
