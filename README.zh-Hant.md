@@ -36,6 +36,8 @@
 **配套預印本**：本數據集為「中國曆法與傳統天文星象」系列科普稿預印本（共 11 篇）提供曆法事實依據——其中節氣交節時刻支撐《立春不是一整天，只有一秒鐘》，干支紀日支撐《干支：從一棵樹到二十二個字》。該系列預印本鏡像見 <https://github.com/Kuangchujia/kuangchujia-preprints>，逐篇正式記錄見 Zenodo 與 [preprints.org](https://www.preprints.org)。
 <!-- ANCHOR-BLOCK-END -->
 
+**站內對應頁**：[二十四節氣交節時刻](https://kuangchujia.com/solar-terms/) ｜ [中國曆法改革溯源](https://kuangchujia.com/calendar-reform/) ｜ [中國歷代曆法五欄位矩陣（52 部）](https://kuangchujia.com/calendar-matrix/) ｜ [中國曆法公共資料集](https://kuangchujia.com/dataset/)
+
 ---
 
 
