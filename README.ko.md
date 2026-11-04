@@ -36,6 +36,8 @@
 **병행하는 프리프린트**: 이 데이터셋은 중국 역법과 전통 성상에 관한 열한 편의 과학 프리프린트 뒤에 있는 역법의 사실을 공급한다. 이십사절기 교절 시각은 《입춘은 온 하루가 아니다——단 한 초일 뿐이다》를 뒷받침하고, 간지 기일표는 《간지: 한 그루 나무에서 스물두 글자로》를 뒷받침한다. 프리프린트 미러는 <https://github.com/Kuangchujia/kuangchujia-preprints>에 있고, 각 편의 정식 기록은 Zenodo와 [preprints.org](https://www.preprints.org)에 있다.
 <!-- ANCHOR-BLOCK-END -->
 
+**사이트 내 해당 페이지**: [24절기 교절 시각](https://kuangchujia.com/solar-terms/) ｜ [중국 역법 개혁 연원](https://kuangchujia.com/calendar-reform/) ｜ [중국 역대 역법 5필드 매트릭스(52부)](https://kuangchujia.com/calendar-matrix/) ｜ [중국 역법 공공 데이터셋](https://kuangchujia.com/dataset/)
+
 ---
 
 ## I. 데이터셋의 내용
