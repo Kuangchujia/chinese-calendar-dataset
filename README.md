@@ -36,6 +36,8 @@
 **Companion preprints**: this dataset supplies the calendrical facts behind a series of eleven popular-science preprints on Chinese calendrics and traditional uranography. The solar-term instants underpin *Beginning of Spring Is Not a Whole Day — Only a Single Second*; the sexagenary day table underpins *The Sexagenary Cycle: From One Tree to Twenty-Two Characters*. The preprint mirror is at <https://github.com/Kuangchujia/kuangchujia-preprints>, with a formal record for each piece on Zenodo and [preprints.org](https://www.preprints.org).
 <!-- ANCHOR-BLOCK-END -->
 
+**On-site pages for these assets**: [solar-term instants](https://kuangchujia.com/solar-terms/) ｜ [calendar-reform chronology](https://kuangchujia.com/calendar-reform/) ｜ [calendar matrix, 52 calendars](https://kuangchujia.com/calendar-matrix/) ｜ [dataset overview](https://kuangchujia.com/dataset/)
+
 ---
 
 ## I. What the dataset contains
