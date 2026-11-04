@@ -36,6 +36,8 @@
 **併走するプレプリント**：本データセットは、中国暦法と伝統星象に関する十一篇の科学プレプリントの背後にある暦法の事実を供給する。二十四節気交節時刻は『立春は丸一日ではない——ただ一秒だけである』を支え、干支紀日表は『干支：一本の木から二十二の字へ』を支える。プレプリントのミラーは <https://github.com/Kuangchujia/kuangchujia-preprints> にあり、各篇の正式な記録は Zenodo と [preprints.org](https://www.preprints.org) にある。
 <!-- ANCHOR-BLOCK-END -->
 
+**サイト内の対応ページ**：[二十四節気の交節時刻](https://kuangchujia.com/solar-terms/) ｜ [中国暦法改革の溯源](https://kuangchujia.com/calendar-reform/) ｜ [中国歴代暦法の五項目マトリクス（52 部）](https://kuangchujia.com/calendar-matrix/) ｜ [中国暦法公共データセット](https://kuangchujia.com/dataset/)
+
 ---
 
 ## I、データセットの内容
